@@ -5,6 +5,8 @@
         <title>Cycling without age</title>
     </head>
     <body>
+        @inlcude('inc.navbar')
+
         @yield('content')
 
         @include('inc.sidebar')
