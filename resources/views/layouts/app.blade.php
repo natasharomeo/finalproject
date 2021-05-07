@@ -4,11 +4,17 @@
         <title>Cycling without Age</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
-    <body class="bg-gray-100">
-        <nav class="p-6 bg-white flex justify-between mb-6">
+    <body class="bg-white-100">
+        <nav class="p-6 bg-blue-200 flex justify-between mb-6">
             <ul class="flex items-center">
                 <li>
-                    <a href="/" class="p-3">Cycling Without Age</a>
+                    <a href="" class="p-3">Cycling Without Age</a>
+                </li>
+                <li>
+                    <a href="" class="p-3">Dashboard</a>
+                </li>
+                <li>
+                    <a href="" class="p-3">Posts</a>
                 </li>
             </ul>
 
