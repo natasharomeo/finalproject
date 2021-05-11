@@ -10,3 +10,7 @@ Route::get('/Posts', function () {
 Route::get('/training', function () {
     return view('training');
 });
+
+Route::get('/adminTraining', function () {
+    return view('admintraining');
+});
