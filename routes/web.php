@@ -42,3 +42,19 @@ Auth::routes();
 
 Route::get('/admin-login', 'Auth\LoginController@showAdminLoginForm');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+=======
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/training', function () {
+    return view('training');
+});
+
+Route::get('/adminposts', function () {
+    return view('adminposts');
+});
+
+Route::get('/addpost', function () {
+    return view('addpost');
+});

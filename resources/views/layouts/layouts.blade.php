@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Cycling without Age</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -91,5 +92,4 @@
     @yield('content')
 </div>
 </body>
-
 </html>
