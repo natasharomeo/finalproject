@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', 'PagesController@home' );
 
 Route::get('/', function () {
     return view('dashboard');

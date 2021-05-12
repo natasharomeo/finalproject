@@ -11,7 +11,7 @@
                     <a href="" class="p-3">Cycling Without Age</a>
                 </li>
                 <li>
-                    <a href="" class="p-3">Dashboard</a>
+                    <a href="/dashboard" class="p-3">Dashboard</a>
                 </li>
                 <li>
                     <a href="" class="p-3">Posts</a>

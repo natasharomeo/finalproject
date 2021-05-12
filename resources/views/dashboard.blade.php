@@ -17,8 +17,9 @@
         
         
             <div class="bg-white shadow rounded-lg w-2/5 mb-10 ml-7 ">
+                
                 <ul class="divide-y divide-gray-300 text-sm text-center ">
-                    <li class="p-2 text-xl ">Next Rides</li>
+                    <li class="p-2 text-xl bg-gray-200"><a href="/">Rides</a></li>
                     <li class="p-2">Location </li>
                     <li class="p-2">Distance</li>
                     <li class="p-2 text-left bg-gray-200">Date:</li>
@@ -34,7 +35,7 @@
         <div class="flex justify-evenly">
             <div class="bg-white shadow rounded-lg w-2/5 mb-10 ml-7 ">
                 <ul class="divide-y divide-gray-300 text-sm text-center ">
-                    <li class="p-2 text-xl bg-gray-200">Training</li>
+                    <li class="p-2 text-xl bg-gray-200"><a href="/">Training</a></li>
                     <li class="p-2">Location </li>
                     <li class="p-2">Distance</li>
                     <li class="p-2 text-left bg-gray-200">Date:</li>
