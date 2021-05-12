@@ -11,16 +11,22 @@
                     <a href="" class="p-3">Cycling Without Age</a>
                 </li>
                 <li>
-                    <a href="" class="p-3">Dashboard</a>
+                    <a href="/dashboard" class="p-3">Dashboard</a>
                 </li>
                 <li>
-                    <a href="" class="p-3">Posts</a>
+                    <a href="" class="p-3"></a>
                 </li>
             </ul>
 
             <ul class="flex items-center">
                     <li>
-                        <a href="" class="p-3">User Name</a>
+                        <a href="" class="p-3">Total KMS = </a>
+                    </li>
+                    <li>
+                        <a href="" class="p-3">Total Distance = </a>
+                    </li>
+                    <li>
+                        <a href="" class="p-3">UserName</a>
                     </li>
                     <li>
                         <a href="" class="p-3">Logout</a>
