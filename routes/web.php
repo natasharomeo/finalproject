@@ -38,11 +38,12 @@ Route::group(['as' => 'main::', 'middleware' => 'auth'], function () {
     });
 
 });
+
 Auth::routes();
 
 Route::get('/admin-login', 'Auth\LoginController@showAdminLoginForm');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
-=======
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
