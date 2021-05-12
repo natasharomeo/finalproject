@@ -7,6 +7,9 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('/training', function () {
+    return view('training');
+});
 
 Route::get('/adminposts', function () {
     return view('adminposts');
