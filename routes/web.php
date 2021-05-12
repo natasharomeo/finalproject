@@ -8,7 +8,6 @@ Route::get('/', function () {
 });
 
 
-
 Route::get('/adminposts', function () {
     return view('adminposts');
 });
