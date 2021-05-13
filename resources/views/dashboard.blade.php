@@ -4,7 +4,7 @@
         <div class="flex justify-evenly">
             <div class="bg-white shadow rounded-lg w-2/5 mb-10 ml-7 ">
                 <ul class="divide-y divide-gray-300 text-sm text-center ">
-                    <li class="p-2 text-xl bg-gray-200">Profile Details</li>
+                    <li class="p-2 text-xl bg-gray-200"> About</li>
                     <li class="p-2">First Name </li>
                     <li class="p-2">Last Name</li>
                     <li class="p-2">Date of Birth</li>

@@ -4,8 +4,8 @@
 
 
 
-    <div class="justify-center p-56">
-        <div class="text-center md:font-bold text-3xl">
+    <div class="justify-center p-44">
+        <div class="text-center md:font-bold text-3xl pb-12">
             <h1>
                 Annoucments
             </h1>
@@ -20,7 +20,7 @@
                     <th class="text-left p-3 px-5">Author</th>
                     <th></th>
                 </tr>
-                <tr class="border-b hover:bg-orange-100 bg-gray-100">
+                <tr class="border-b hover:bg-orange-100 bg-gray-100 ">
                     <td class="p-3 px-5"><input type="text" value="Title" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="text" value="Content" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="text" value="Author" class="bg-transparent"></td>

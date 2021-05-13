@@ -16,4 +16,3 @@ Route::get('/adminposts', function () {
 Route::get('/addpost', function () {
     return view('addpost');
 });
-
