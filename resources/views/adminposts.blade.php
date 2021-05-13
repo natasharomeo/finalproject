@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
     <div class="justify-center p-44">
         <div class="text-center md:font-bold text-3xl pb-12">
             <h1>

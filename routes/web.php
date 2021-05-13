@@ -16,3 +16,15 @@ Route::get('/adminposts', function () {
 Route::get('/addpost', function () {
     return view('addpost');
 });
+
+Route::get('/ride', function () {
+    return view('ride');
+});
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+Route::get('/training', function () {
+    return view('training');
+});
