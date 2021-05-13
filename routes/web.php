@@ -23,4 +23,8 @@ Route::get('/addpost', function () {
     return view('addpost');
 });
 
+Route::get('/addtraining', function () {
+    return view('addtraining');
+});
+
 

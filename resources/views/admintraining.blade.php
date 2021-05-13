@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="justify-center p-56">
+<div class="justify-center p-32">
         <div class="text-center md:font-bold text-3xl">
             <h1>
                 Training Events
