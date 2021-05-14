@@ -28,3 +28,12 @@ Route::get('/admin', function () {
 Route::get('/training', function () {
     return view('training');
 });
+
+
+Route::get('/admintraining', function () {
+    return view('admintraining');
+});
+
+Route::get('/addtraining', function () {
+    return view('addtraining');
+});
