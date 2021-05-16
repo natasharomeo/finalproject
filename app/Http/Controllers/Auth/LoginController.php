@@ -44,6 +44,7 @@ class LoginController extends Controller
     {
         return view('auth.admin_login');
     }
+
     public function login(Request $request)
     {
 
@@ -68,6 +69,7 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+
     }
     protected function sendLoginResponse(Request $request)
     {
