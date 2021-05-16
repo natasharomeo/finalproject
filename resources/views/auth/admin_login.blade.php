@@ -11,11 +11,12 @@
     {{--<div class=" p-3 mb-3 bg-white border-bottom shadow-sm">--}}
         {{--<img class="my-0" src="images/logo1.png" alt="Nature" height="150px" width="100%">--}}
     {{--</div>--}}
-    <div class="wrapper1">
-        <div class="side-image">
-        </div>
+    <div class="wrapper1 justify-center">
+        {{--<div class="side-image">--}}
+        {{--</div>--}}
         <div class="login-wrap">
             <div class="login-html">
+                <h1 class="text-center p-9 text-3xl">Cycling without Age</h1>
                 <!-- Switching between Sign In and Sign Up page, By using Radio Button -->
                 <input id="sign-in-radio" type="radio" name="tab" class="sign-in" checked>
                 <label for="sign-in-radio" class="tab">Sign In</label>
@@ -52,6 +53,9 @@
                                 </div>
                                 <input type="submit" class="button" value="Sign In">
                             </form>
+                        </div>
+                        <div class="group" style="padding-left: 250px; color: #4acfee;text-decoration:underline">
+                            <a href="{{url('/login')}}">Go for User</a>
                         </div>
                         <div class="hr"></div>
                         <div class="foot-lnk">
@@ -397,41 +401,5 @@
         </div>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-{{--password match miss match--}}
-<script type="text/javascript">
-    $('#password2').on('keyup',function () {
-        Validate();
-    });
-    function Validate() {
-
-        var password = document.getElementById("password1").value;
-        var confirmPassword = document.getElementById("password2").value;
-
-        $('#password1, #password2').on('keyup', function () {
-            var password = document.getElementById("password1").value;
-            var confirmPassword = document.getElementById("password2").value;
-            if (password === confirmPassword) {
-                console.log("here");
-                $('#message').html('Matching').css('color', 'green');
-            } else {
-                $('#message').html('Not Matching').css('color', 'red');
-                console.log("here in not");
-            }
-        });
-        // If password not entered
-        if (password == ''){
-            // alert("Please enter Password");
-            return false;
-        }else if (confirmPassword == ''){
-            // alert ("Please enter confirm password");
-            return false;
-        }else if (password != confirmPassword) {
-            $('#message').html('Not Matching').css('color', 'red');
-            // alert("Passwords do not match.");
-            return false;
-        }
-    }
-</script>
 </body>
 </html>
