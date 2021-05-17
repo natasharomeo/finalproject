@@ -53,6 +53,10 @@ class RegisterController extends Controller
         }
         $user_role = ($request['user'] == 'admin' ? 1:3);
 
+        if($request['user'] == 'admin'){
+            $this->redirectTo = '/adminposts';
+        }
+
         $member = User::create([
             'user_type' => $user_role,
             'name' => $request['name'],
@@ -67,6 +71,7 @@ class RegisterController extends Controller
 
         event(new Registered($member));
         $this->guard()->login($member);
+//        dd($this->redirectTo);
         return $this->registered($request, $member)
             ?: redirect($this->redirectPath());
     }

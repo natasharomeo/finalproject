@@ -41,7 +41,15 @@ Route::group(['as' => 'main::', 'middleware' => 'auth'], function () {
         return view('addpost');
     });
 
+    Route::get('/users', function () {
+        return view('users');
+    });
+    Route::get('/adduser', function () {
+        return view('adduser');
+    });
+
 });
+
 Auth::routes();
 
 Route::get('/admin-login', 'Auth\LoginController@showAdminLoginForm');
