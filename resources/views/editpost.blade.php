@@ -5,27 +5,28 @@
 <div class="justify-center pl-64">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg ">
             <div class="p-6 bg-white border-b border-gray-200">
-<form method = "POST" action = "/adminposts">
+<form method = "POST" action = "/editpost">
 @csrf
+<input type ="hidden" name = "id" value={{$posts['id']}}>
 
                     <div class="mb-4">
 					<label class="text-xl text-gray-600">Title <span class="text-red-500">*</span></label></br>
-                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="title" id="title" value="" required></input>
+                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="title" id="title" value="{{$posts['title']}}"></input>
                     </div>
 
                     <div class="mb-8">
                         <label class="text-xl text-gray-600">Description <span class="text-red-500">*</span></label></br>
-                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" value="" required></input>
+                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" value="{{$posts['description']}}"></input>
                     </div>
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Author <span class="text-red-500">*</span></label></br>
-                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="author" id="author" value="" required></input>
+                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="author" id="author" value="{{$posts['author']}}"></input>
                         </div>
-
-    
-                   
-                        <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                        <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Update</button>
+                        
+                    
+        
                     </div>
                 </form>
             </div>
