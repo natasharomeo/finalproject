@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Admin;
+use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -21,21 +21,35 @@ class UserController extends Controller
     //return $request ->input();
     //validate requests
     $request->validate([
-        'name'=>'required',
+        'fname'=>'required',
+        'lname'=>'required',
         'email'=>'required|email|unique:admins',
+        'dob'=>'required',
+        'city'=>'required',
+        'suburb'=>'required',
+        'phoneNo'=>'required',
         'password'=>'required'
        
     ]);
 
     //insert data into database 
-    $admin = new Admin;
-    $admin->name = $request->name;
-    $admin->email = $request->email;
-    $admin->password = Hash::make($request->password);
-    $save = $admin->save();
+    $user = new Users;
+    $user->fname = $request->fname;
+    $user->lname = $request->lname;
+    $user->email = $request->email;
+    $user->dob = $request->dob;
+    $user->city = $request->city;
+    $user->suburb = $request->suburb;
+    $user->phoneNo = $request->phoneNo;
+    $user->password = Hash::make($request->password);
+         $save = $user->save();
 
+         if($save){
+            return back()->with('success','New User has been successfuly added to database');
+         }else{
+             return back()->with('fail','Something went wrong, try again later');
+         }
     }
-
 
     function check(Request $request){
         //Validate requests
@@ -45,7 +59,7 @@ class UserController extends Controller
         ]);
         
         //query to fetch user with requested email from database 
-        $userInfo = Admin::where('email','=', $request->email)->first();
+        $userInfo = Users::where('email','=', $request->email)->first();
         
         if(!$userInfo){
             return back()->with('fail','We do not recognize your email address');
@@ -58,5 +72,21 @@ class UserController extends Controller
                 return back()->with('fail','Incorrect password');
             }
         }
+
+        function dashboard (){
+        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+        return view('admin.dashboard', $data);
+        }
+
+        function logout(){
+            if(session()->has('LoggedUser')){
+                session()->pull('LoggedUser');
+                return redirect('/auth/login');
+            }
+        }
+
+
+
+       
     }
 

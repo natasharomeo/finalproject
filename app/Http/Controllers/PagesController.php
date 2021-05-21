@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        return view('index');
+        return view('dashboard');
     }
 
     public function training()
@@ -20,4 +20,9 @@ class PagesController extends Controller
     {
         return view('ride');
     }
+
 }
+
+
+
+
