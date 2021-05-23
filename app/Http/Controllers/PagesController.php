@@ -21,6 +21,11 @@ class PagesController extends Controller
         return view('ride');
     }
 
+    public function example()
+    {
+        return view('example');
+    }
+
 }
 
 

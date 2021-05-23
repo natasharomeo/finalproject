@@ -11,6 +11,8 @@ use App\Http\Controllers\AdminController;
 
 
 
+
+
 Route::get('/adminuser', [AdminController::class, 'adminuser']);
 
 //Route::get('/', [PagesController::class, 'index']);
