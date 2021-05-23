@@ -5,10 +5,11 @@
 <div class="justify-center pl-64">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg ">
             <div class="p-6 bg-white border-b border-gray-200">
-                <form method="POST" action="/adduser" class="w-96">
+                <form method="POST" action="{{ url('adduser') }}" class="w-96">
+                        @csrf
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Name<span class="text-red-500">*</span></label></br>
-                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="title" placeholder="Name" id="title" value="" required>
+                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="name" placeholder="Name" id="title" value="" required>
                     </div>
 
                     <div class="mb-4">
@@ -33,14 +34,14 @@
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Country</label></br>
-                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="country" id="country" placeholder="Country">
+                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="country" id="country" value="" placeholder="Country">
                     </div>
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Role</label></br>
                         <select class="border-2 border-gray-300 border-r p-2" name="role">
-                            <option>User</option>
-                            <option>Volunteer</option>
+                            <option value="2">leader</option>
+                            <option value="3">Volunteer</option>
                         </select>
                     </div>
 

@@ -87,7 +87,7 @@
                 <span>Badges</span>
             </a>
 
-            <a href="/users"
+            <a href="{{url('/users')}}"
                class="flex space-x-2 items-center text-gray-600 p-2 hover:bg-gray-200 rounded-lg hover:text-gray-900">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-7 fill-current" width="24" height="24"
                      viewBox="0 0 24 24">
