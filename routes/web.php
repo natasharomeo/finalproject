@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,12 +42,14 @@ Route::group(['as' => 'main::', 'middleware' => 'auth'], function () {
         return view('addpost');
     });
 
-    Route::get('/users', function () {
-        return view('users');
-    });
+    Route::get('/users', [AdminController::class, 'users']);
     Route::get('/adduser', function () {
         return view('adduser');
     });
+    Route::post('/adduser', [AdminController::class, 'adduser']);
+    Route::get('/delete-user/{id}', [AdminController::class, 'deleteUser']);
+    Route::get('/edit-user/{id}', [AdminController::class, 'editUser']);
+    Route::post('/edit-user', [AdminController::class, 'updateUser']);
 
 });
 
