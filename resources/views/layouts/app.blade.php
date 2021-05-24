@@ -13,15 +13,7 @@
             </ul>
 
             <ul class="flex items-center">
-                    <li>
-                        <a href="" class="p-3">Total distance</a>
-                    </li>
-                    <li>
-                        <a href="" class="p-3">Total Rides</a>
-                    </li>
-                    <li>
-                        <a href="" class="p-3">{{ $LoggedUserInfo['fname'] }}</a>
-                    </li>
+                
                     <li>
                         <a href="{{ route('auth.logout') }}" class="p-3">Logout</a>
                     </li>
