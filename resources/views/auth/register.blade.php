@@ -93,7 +93,7 @@
       </div>
     </div>
 
-<input type = "dob" name="dob" placeholder="dob"  value="{{ old('dob') }}"> 
+<input type = "date" name="dob" placeholder="dob"  value="{{ old('dob') }}"> 
 <span class="text-danger">@error('dob'){{ $message }} @enderror</span>
 <br><br>
 

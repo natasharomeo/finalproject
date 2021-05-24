@@ -63,6 +63,8 @@ Route::get('delete/{id}', [PostsController::class, 'delete']);
 
 
 
+
+
 Route::get('/admin', function () {
     return view('admin');
 });
