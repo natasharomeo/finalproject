@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.ridelayout')
 
 @section('content')
 
@@ -15,18 +15,25 @@
                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                         </span>
-                        <span class="tracking-wide">Upcoming Training</span>
+                        <span class="tracking-wide">Upcoming Rides</span>
                     </div>
-                    @foreach ($training as $trainings)
                     <ul class="list-inside space-y-2">
-                        <li class="p-2">{{ $trainings['Name'] }}</li>
-                        <li class="p-2">{{ $trainings['Location'] }} </li>
-                        <li class="p-2">{{ $trainings['Rideleader'] }}</li>
-                        <li class="p-2 text-left bg-gray-200">{{ $trainings['Date'] }}</li>
-                        <li><button class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Join ride</button></li>
+                                <li class="p-2">Name:</li>
+                                <li class="p-2">Location: </li>
+                                <li class="p-2">Distance:</li>
+                                <li class="p-2 text-left bg-gray-200">Date:</li>
+                                <li><button class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Join ride</button></li>
                     </ul>
-                    @endforeach
+                    
+                    <ul class="list-inside space-y-2">
+                                <li class="p-2">Name:</li>
+                                <li class="p-2">Location: </li>
+                                <li class="p-2">Distance:</li>
+                                <li class="p-2 text-left bg-gray-200">Date:</li>
+                                <li><button class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Join ride</button></li>
+                    </ul>
                 </div>
+                <!-- End of about section -->
 
                 <div class="my-9"></div>
 
@@ -39,15 +46,15 @@
                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                         </span>
-                        <span class="tracking-wide">Past Training</span>
+                        <span class="tracking-wide">Past Rides</span>
                     </div>
                     <ul class="list-inside space-y-2">
-                                <li class="p-2">Name</li>
-                                <li class="p-2">Location </li>
-                                <li class="p-2">Distance</li>
+                                <li class="p-2">Name:</li>
+                                <li class="p-2">Location: </li>
+                                <li class="p-2">Distance:</li>
                                 <li class="p-2 text-left bg-gray-200">Date:</li>
-                                <li class="p-2">Location </li>
-                                <li class="p-2">Distance</li>
+                                <li class="p-2">Location: </li>
+                                <li class="p-2">Distance:</li>
                                 <li class="p-2 text-left bg-gray-200">Date:</li>
                     </ul>
                 </div>
@@ -57,4 +64,4 @@
             </div>
         </div>
 
-@endsection
+        @endsection
