@@ -67,3 +67,5 @@ Route::get('/admintraining', function () {
 Route::get('/addtraining', function () {
     return view('addtraining');
 });
+
+//no chnanges
