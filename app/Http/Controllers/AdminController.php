@@ -5,10 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Admin;
 use App\Models\Users;
+use Facade\FlareClient\View;
 use Illuminate\Foundation\Auth\User;
 
 class AdminController extends Controller
+
 {
+    public function dashboard()
+    {
+    return view ('admin/admindashboard');
+    }
+
     function adminuser (){
         $users = Users::all();
         return view('/adminuser', compact('users'));
@@ -30,6 +37,5 @@ class AdminController extends Controller
             return redirect('/adminuser');
 
         }
-
 
 }

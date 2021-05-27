@@ -30,9 +30,9 @@ Route::get('/app/logout',[UserController::class, 'logout'])->name('auth.logout')
 
 //Route::group(['middleware'=>['AuthCheck']], function(){
 
-    Route::get('/auth/login',[UserController::class, 'login'])->name('auth.login');
+Route::get('/auth/login',[UserController::class, 'login'])->name('auth.login');
 Route::get('/auth/register',[UserController::class, 'register'])->name('auth.register');
-Route::get('/admin/dashboard',[UserController::class, 'dashboard']);
+Route::get('/dashboard',[UserController::class, 'dashboard']);
 
 //});
 
@@ -52,15 +52,7 @@ Route::get('/adminposts/{id}/editpost', [PostsController::class, 'showData']);
 Route::post('/editpost', [PostsController::class, 'update']);
 Route::get('delete/{id}', [PostsController::class, 'delete']);
 
-
-
-
-
-
-
-
-
-
+//Route::get('/dashboard', [PostsController::class, 'display']);
 
 
 

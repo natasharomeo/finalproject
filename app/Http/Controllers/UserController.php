@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Users;
+use App\Models\Posts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -66,7 +67,7 @@ class UserController extends Controller
         }
             if(Hash::check($request->password, $userInfo->password)){
                 $request->session()->put('LoggedUser', $userInfo->id);
-                return redirect('admin/dashboard');
+                return redirect('/dashboard');
 //checks password
             }else{
                 return back()->with('fail','Incorrect password');
@@ -75,8 +76,17 @@ class UserController extends Controller
 
         function dashboard (){
         $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
-        return view('admin.dashboard', $data);
+        $posts = Posts::all();
+        return view('/dashboard', $data, compact('posts'));
         }
+
+       // function announcments (){
+       // $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+       // $posts = Posts::all();
+       // return view('/dashboard', compact('posts'));
+       // }
+        
+
 
         function logout(){
             if(session()->has('LoggedUser')){
@@ -89,4 +99,3 @@ class UserController extends Controller
 
        
     }
-

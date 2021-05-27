@@ -54,16 +54,6 @@
       </div>
     </div>
 
-    <div class="-mx-3 md:flex mb-6">
-      <div class="md:w-full px-3">
-        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-password">
-          Password
-        </label>
-        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type = "password" name="password" placeholder="Password"  value="">
-        <span class="text-danger">@error('password'){{ $message }} @enderror</span>
-      </div>
-    </div>
-
     <div class="-mx-3 md:flex mb-2">
       <div class="md:w-1/2 px-3 mb-6 md:mb-0">
         <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-city">
@@ -83,19 +73,48 @@
 
     </div>
 
-    <div class="-mx-3 md:flex mb-6">
-      <div class="md:w-full px-3">
+    <div class="-mx-3 md:flex mb-2">
+      <div class="md:w-1/2 px-3 mb-6 md:mb-0">
         <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-password">
           Phone No
         </label>
         <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type = "phoneNo" name="phoneNo" placeholder="phoneNo"  value="{{ old('phoneNo') }}"> 
         <span class="text-danger">@error('phoneNo'){{ $message }} @enderror</span>
       </div>
+
+      <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-password">
+          Date of Birth
+        </label>
+        <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type = "date" name="dob" placeholder="dob"  value="{{ old('dob') }}"> 
+        <span class="text-danger">@error('dob'){{ $message }} @enderror</span>
+      </div>
     </div>
 
-<input type = "date" name="dob" placeholder="dob"  value="{{ old('dob') }}"> 
-<span class="text-danger">@error('dob'){{ $message }} @enderror</span>
-<br><br>
+    <div class="-mx-3 md:flex mb-6">
+      <div class="md:w-full px-3">
+        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-password">
+          Status
+        </label>
+        <select class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type = "text" name="status" placeholder="status"  value="{{ old('status') }}">
+          <option>Pilot Ride</option>
+          <option>Rider</option>
+          <option>Ride Leader</option>
+        </select>
+      </div>
+    </div>
+    
+
+
+<div class="-mx-3 md:flex mb-6">
+  <div class="md:w-full px-3">
+    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-password">
+      Password
+    </label>
+    <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type = "password" name="password" placeholder="Password"  value="">
+    <span class="text-danger">@error('password'){{ $message }} @enderror</span>
+  </div>
+</div>
 
 
 <div class="mt-10">

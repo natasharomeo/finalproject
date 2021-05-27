@@ -14,6 +14,9 @@ class PostsController extends Controller
         return view('/adminposts', compact('posts'));
     }
 
+  
+
+
     public function create()
     {
         return view('/addpost');
