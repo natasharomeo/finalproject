@@ -97,8 +97,7 @@ class UserController extends Controller
                 return redirect('/auth/login');
             }
         }
-
-
-
-       
+  
     }
+
+    //new code
