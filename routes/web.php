@@ -1,57 +1,64 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\RideController;
 
 
-Route::get('/', function () {
-    return view('dashboard');
+Route::get('/example', [PagesController::class, 'example']);
+
+Route::get('/adminuser', [AdminController::class, 'adminuser']);
+
+//Route::get('/', [PagesController::class, 'index']);
+Route::get('/training', [PagesController::class, 'training']);
+Route::get('/ride', [PagesController::class, 'ride']);
+
+
+
+Route::post('/auth/save' , [UserController::class, 'save'])->name('auth.save');
+Route::post('/auth/check', [UserController::class, 'check'])->name('auth.check');
+
+Route::get('/app/logout',[UserController::class, 'logout'])->name('auth.logout');
+
+
+
+//Route::group(['middleware'=>['AuthCheck']], function(){
+
+Route::get('/auth/login',[UserController::class, 'login'])->name('auth.login');
+Route::get('/auth/register',[UserController::class, 'register'])->name('auth.register');
+Route::get('/dashboard',[UserController::class, 'dashboard']);
+
+//});
+
+
+//User Admin Routes
+Route::get('/adminuser/{id}/edituser', [AdminController::class, 'show']);
+Route::post('/edituser', [PostsController::class, 'update']);
+
+
+
+//Admin Routes 
+
+Route::get('/adminposts', [PostsController::class, 'index']);
+Route::post('/adminposts', [PostsController::class, 'store']);
+Route::get('/addpost', [PostsController::class, 'create']);
+Route::get('/adminposts/{id}/editpost', [PostsController::class, 'showData']);
+Route::post('/editpost', [PostsController::class, 'update']);
+Route::get('delete/{id}', [PostsController::class, 'delete']);
+
+//Route::get('/dashboard', [PostsController::class, 'display']);
+
+Route::get('/admin', function () {
+    return view('admin');
+
 });
 
-
-
-/*Route::get('/training', 'PagesController@training');*/
-
-Route::get('/training', function () {
-    return view('training');
+Route::get('/admintraining', function () {
+    return view('admintraining');
 });
 
-Route::get('/ride', function () {
-    return view('ride');
-});
-
-Route::get('/admintraining', [TrainingController::class, 'index']);
-
-Route::get('/addtraining', [TrainingController::class, 'create']);
-Route::post('/admintraining', [TrainingController::class, 'store']);
-
-Route::get('/admintraining/{id}/training', [TrainingController::class, 'showData']);
-Route::post('/edittraining', [TrainingController::class, 'update']);
-
-Route::get('delete/{id}', [TrainingController::class, 'delete']);
-
-Route::get('/adminride', [RideController::class, 'index']);
-
-Route::get('/addride', [RideController::class, 'create']);
-Route::post('/adminride', [RideController::class, 'store']);
-
-Route::get('/adminride/{id}/editride', [RideController::class, 'showData']);
-Route::post('/editride', [RideController::class, 'update']);
-
-Route::get('delete/{id}', [RideController::class, 'delete']);
-
-
-
-
-Route::get('/adminposts', function () {
-    return view('adminposts');
-});
-
-Route::get('/addpost', function () {
-    return view('addpost');
-});
-
-/*Route::get('/addtraining', function () {
+Route::get('/addtraining', function () {
     return view('addtraining');
-});*/
+});
