@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.profile')
 
 @section('content')
 
@@ -17,15 +17,15 @@
                         </span>
                         <span class="tracking-wide">Upcoming Training</span>
                     </div>
-                    @foreach ($training as $trainings)
+       
                     <ul class="list-inside space-y-2">
-                        <li class="p-2">{{ $trainings['Name'] }}</li>
-                        <li class="p-2">{{ $trainings['Location'] }} </li>
-                        <li class="p-2">{{ $trainings['Rideleader'] }}</li>
-                        <li class="p-2 text-left bg-gray-200">{{ $trainings['Date'] }}</li>
+                        <li class="p-2"></li>
+                        <li class="p-2"></li>
+                        <li class="p-2"></li>
+                        <li class="p-2 text-left bg-gray-200"></li>
                         <li><button class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Join ride</button></li>
                     </ul>
-                    @endforeach
+           
                 </div>
 
                 <div class="my-9"></div>
