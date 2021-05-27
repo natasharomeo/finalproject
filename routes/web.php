@@ -56,14 +56,6 @@ Route::get('delete/{id}', [PostsController::class, 'delete']);
 
 //Route::get('/dashboard', [PostsController::class, 'display']);
 
-Route::get('/adminride', [RideController::class, 'index']);
-Route::post('/adminride', [RideController::class, 'store']);
-Route::get('/addride', [RideController::class, 'create']);
-Route::get('/adminride/{id}/editride', [RideController::class, 'showData']);
-Route::post('/editride', [RideController::class, 'update']);
-Route::get('delete/{id}', [RideController::class, 'delete']);
-
-
 Route::get('/admin', function () {
     return view('admin');
 });
