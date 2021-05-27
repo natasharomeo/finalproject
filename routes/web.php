@@ -7,7 +7,7 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RideController;
-
+use App\Http\Controllers\TrainingController;
 
 
 
@@ -68,4 +68,10 @@ Route::get('/adminride/{id}/editride', [RideController::class, 'showData']);
 Route::post('/editride', [RideController::class, 'update']);
 Route::get('delete/{id}', [RideController::class, 'deleteride']);
 
-//no chnanges
+Route::get('/admintraining', [TrainingController::class, 'index']);
+Route::post('/admintraining', [TrainingController::class, 'store']);
+Route::get('/addtraining', [TrainingController::class, 'create']);
+Route::get('/admintraining/{id}/edittraining', [TrainingController::class, 'showData']);
+Route::post('/edittraining', [TrainingController::class, 'update']);
+Route::get('delete/{id}', [TrainingController::class, 'delete']);
+
