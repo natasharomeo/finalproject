@@ -2,15 +2,9 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
-use App\Http\Controllers\PostsController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\AdminController;
+
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\RideController;
-
-
-
 
 
 Route::get('/example', [PagesController::class, 'example']);
@@ -58,6 +52,7 @@ Route::get('delete/{id}', [PostsController::class, 'delete']);
 
 Route::get('/admin', function () {
     return view('admin');
+
 });
 
 Route::get('/admintraining', function () {
