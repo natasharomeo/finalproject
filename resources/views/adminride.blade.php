@@ -27,7 +27,7 @@
                 </tr>
                 @foreach($ride as $rides)
                     <tr class="border-b hover:bg-orange-100 bg-gray-100">
-                    <td class="p-3 px-5"><input type="text" value="{{$rides['name']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-5"><input type="text" value="{{$rides['Name']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="text" value="{{$rides['Location']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="int" value="{{$rides['Distance']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="text" value="{{$rides['RideLeader']}}" class="bg-transparent"></td>
