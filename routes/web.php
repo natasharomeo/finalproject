@@ -6,7 +6,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\TrainingController;
+
 use App\Http\Controllers\RideController;
 
 
@@ -60,12 +60,5 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
-Route::get('/admintraining', function () {
-    return view('admintraining');
-});
-
-Route::get('/addtraining', function () {
-    return view('addtraining');
-});
 
 //no chnanges
