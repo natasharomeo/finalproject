@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Training;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TrainingController extends Controller
 {
@@ -51,10 +52,10 @@ class TrainingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function showData($id)
+    public function showData($training)
     {
-        $trainings = Trainings::find($id);
-        return view('/edittraining', ['training' => $trainings]);
+        $trainings = Trainings::find($training);
+        return view('/training', ['training' => $training]);
     }
 
 

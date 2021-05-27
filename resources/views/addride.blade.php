@@ -24,7 +24,7 @@
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Ride Leader</label></br>
-                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="Rideleader" id="rideleader" value="" required></input>
+                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="rideleader" id="rideleader" value="" required></input>
                     </div>
 
                     <div class="mb-4">

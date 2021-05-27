@@ -18,8 +18,9 @@ class CreateRideTable extends Migration
             $table->string('Name');
             $table->string('Location');
             $table->string('Distance');
-            $table->string('Ride Leader');
+            $table->string('Rideleader');
             $table->date('Date');
+            $table->timestamps();
         });
     }
 

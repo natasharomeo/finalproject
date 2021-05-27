@@ -22,27 +22,24 @@ Route::get('/ride', function () {
 });
 
 Route::get('/admintraining', [TrainingController::class, 'index']);
-Route::post('/admintraining', [TrainingController::class, 'store']);
+
 Route::get('/addtraining', [TrainingController::class, 'create']);
-Route::get('/admintraining/{id}/edittraining', [TrainingController::class, 'showData']);
+Route::post('/admintraining', [TrainingController::class, 'store']);
+
+Route::get('/admintraining/{id}/training', [TrainingController::class, 'showData']);
 Route::post('/edittraining', [TrainingController::class, 'update']);
+
 Route::get('delete/{id}', [TrainingController::class, 'delete']);
 
 Route::get('/adminride', [RideController::class, 'index']);
-Route::post('/adminride', [RideController::class, 'store']);
+
 Route::get('/addride', [RideController::class, 'create']);
+Route::post('/adminride', [RideController::class, 'store']);
+
 Route::get('/adminride/{id}/editride', [RideController::class, 'showData']);
 Route::post('/editride', [RideController::class, 'update']);
+
 Route::get('delete/{id}', [RideController::class, 'delete']);
-
-/*Route::get('/adminTraining', function () {
-    return view('admintraining');
-});
-
-Route::resource('/training', 'App\Http\Controllers\TrainingController');
-
-Route::resource('/training', TrainingController::class);*/
-
 
 
 
@@ -55,6 +52,6 @@ Route::get('/addpost', function () {
     return view('addpost');
 });
 
-Route::get('/addtraining', function () {
+/*Route::get('/addtraining', function () {
     return view('addtraining');
-});
+});*/

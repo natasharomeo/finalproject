@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Ride;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RideController extends Controller
 {
@@ -40,6 +41,7 @@ class RideController extends Controller
         $rides->name = request('name');
         $rides->location = request('location');
         $rides->distance = request('distance');
+        $rides->rideleader = request('rideleader');
         $rides->date = request('date');
         $rides->save();
         return redirect('/adminride');
@@ -51,9 +53,9 @@ class RideController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function showData($id)
+    public function showData($rides)
     {
-        $rides = Rides::find($id);
+        $rides = Rides::find($rides);
         return view('/editrides', ['ride' => $rides]);
     }
 
