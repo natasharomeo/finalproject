@@ -1,4 +1,4 @@
-@extends('layouts.ridelayout')
+@extends('layouts.profile')
 
 @section('content')
 
