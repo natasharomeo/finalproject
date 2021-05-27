@@ -14,6 +14,9 @@ class PostsController extends Controller
         return view('/adminposts', compact('posts'));
     }
 
+  
+
+
     public function create()
     {
         return view('/addpost');
@@ -30,7 +33,6 @@ class PostsController extends Controller
     }
 
 
-    
     public function showData($id)
     {
         $posts = Posts::find($id);

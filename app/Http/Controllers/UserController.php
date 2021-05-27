@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Users;
+use App\Models\Posts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -28,6 +29,7 @@ class UserController extends Controller
         'city'=>'required',
         'suburb'=>'required',
         'phoneNo'=>'required',
+        'status'=>'required',
         'password'=>'required'
        
     ]);
@@ -41,6 +43,7 @@ class UserController extends Controller
     $user->city = $request->city;
     $user->suburb = $request->suburb;
     $user->phoneNo = $request->phoneNo;
+    $user->status = $request->status;
     $user->password = Hash::make($request->password);
          $save = $user->save();
 
@@ -50,6 +53,7 @@ class UserController extends Controller
              return back()->with('fail','Something went wrong, try again later');
          }
     }
+
 
     function check(Request $request){
         //Validate requests
@@ -66,7 +70,7 @@ class UserController extends Controller
         }
             if(Hash::check($request->password, $userInfo->password)){
                 $request->session()->put('LoggedUser', $userInfo->id);
-                return redirect('admin/dashboard');
+                return redirect('/dashboard');
 //checks password
             }else{
                 return back()->with('fail','Incorrect password');
@@ -75,8 +79,17 @@ class UserController extends Controller
 
         function dashboard (){
         $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
-        return view('admin.dashboard', $data);
+        $posts = Posts::all();
+        return view('/dashboard', $data, compact('posts'));
         }
+
+       // function announcments (){
+       // $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+       // $posts = Posts::all();
+       // return view('/dashboard', compact('posts'));
+       // }
+        
+
 
         function logout(){
             if(session()->has('LoggedUser')){
@@ -84,9 +97,7 @@ class UserController extends Controller
                 return redirect('/auth/login');
             }
         }
-
-
-
-       
+  
     }
 
+    //new code

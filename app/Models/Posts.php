@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Posts extends Model
 {
-    protected $table = 'Posts';
-    public $timestamps =false;
+    use HasFactory;
   
 }
