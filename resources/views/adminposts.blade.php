@@ -29,7 +29,7 @@
         
             <tr class="border-b hover:bg-orange-100 bg-gray-100">
                 <td class="p-3 px-5"><input type="text" value="{{$post['title']}}" class="bg-transparent"></td>
-                <td class="p-3 px-5"><input type="text" value= "{{$post['description']}}" class="bg-transparent"></td>
+                <td class="p-3 px-5"><input type="textarea" value= "{{$post['description']}}" class="bg-transparent"></td>
                 <td class="p-3 px-5"><input type="text" value="{{$post['author']}}" class= "bg-transparent"></td>
                 <td class="p-3 px-5 flex justify-end">
                     

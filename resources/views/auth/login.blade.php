@@ -7,8 +7,8 @@
 
 <div class="w-full h-100">
 
-
- <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">Log in to your account</h1>
+   <img src="/images/mainlogo.png" alt="" class="w-full h-full object-cover">
+ <h2 class="text-xl md:text-2xl font-bold leading-tight mt-12">Log in to your account</h2>
                <form action="{{ route('auth.check') }}" method="post" class = "mt-6">
        
          

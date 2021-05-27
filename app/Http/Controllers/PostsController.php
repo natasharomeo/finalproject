@@ -33,7 +33,6 @@ class PostsController extends Controller
     }
 
 
-    
     public function showData($id)
     {
         $posts = Posts::find($id);

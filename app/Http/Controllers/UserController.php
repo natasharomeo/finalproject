@@ -29,6 +29,7 @@ class UserController extends Controller
         'city'=>'required',
         'suburb'=>'required',
         'phoneNo'=>'required',
+        'status'=>'required',
         'password'=>'required'
        
     ]);
@@ -42,6 +43,7 @@ class UserController extends Controller
     $user->city = $request->city;
     $user->suburb = $request->suburb;
     $user->phoneNo = $request->phoneNo;
+    $user->status = $request->status;
     $user->password = Hash::make($request->password);
          $save = $user->save();
 
@@ -51,6 +53,7 @@ class UserController extends Controller
              return back()->with('fail','Something went wrong, try again later');
          }
     }
+
 
     function check(Request $request){
         //Validate requests

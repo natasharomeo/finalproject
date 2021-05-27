@@ -15,7 +15,7 @@
 
                     <div class="mb-8">
                         <label class="text-xl text-gray-600">Description <span class="text-red-500">*</span></label></br>
-                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" value="" required></input>
+                        <input type="textarea" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" value="" required></input>
                     </div>
 
                     <div class="mb-4">

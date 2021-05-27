@@ -3,12 +3,10 @@
 @section('content')
         <div class="flex justify-evenly">
          
-            <div class="w1/2 mb-10 ml-7 ">
+            <div class="w-80 mb-10 ml-7 ">
                 <div class="bg-white p-3 border-t-4 border-green-400">
                    
                     <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">{{ $LoggedUserInfo['fname'] }}</h1>
-         
-                  
                     <ul
                         class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                         <li class="flex items-center py-3">
@@ -32,34 +30,46 @@
                     </ul>
                 </div>
 
+                <div class="bg-white p-3 my-4">
+                   
+                    <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">About</h1>
+         
+                  
+                    <ul
+                        class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
+                        <li class="flex items-center py-3">
+                            <span>Date of Birth</span>
+                            <span class="ml-auto"><span
+                                    class="flex items-center py-3">{{ $LoggedUserInfo['dob'] }}</span></span>
+            
+                        </li>
+                        <li class="flex items-center py-3">
+                            <span>City</span>
+                            <span class="ml-auto"><span
+                                    class="flex items-center py-3">{{ $LoggedUserInfo['city'] }}</span></span>
+            
+                        </li>
+                        <li class="flex items-center py-3">
+                            <span>Suburb</span>
+                            <span class="ml-auto"><span
+                                    class="flex items-center py-3">{{ $LoggedUserInfo['suburb'] }}</span></span>
+                        </li>
+                        <li class="flex items-center py-3">
+                            <span>Phone No</span>
+                            <span class="ml-auto"><span
+                                    class="flex items-center py-3">{{ $LoggedUserInfo['phoneNo'] }}</span></span>
+            
+                        </li>
+           
+           
+           
 
-                <!-- End of profile card -->
-                <div class="my-4"></div>
-                <div class="bg-white p-3 hover:shadow">
-                    <div class="flex items-center space-x-3 font-semibold text-gray-900 text-xl leading-8">
-                        <span class="text-green-500">
+                    </div>
                     
-                        </span>
-                        <span>About</span>
-                    </div>
-                    <div class="grid grid-cols-3">
-                        <div class="text-center my-2">
-                            <ul>
-                            <li class="p-2">{{ $LoggedUserInfo['fname'] }} </li>
-                            <li class="p-2">{{ $LoggedUserInfo['lname'] }}</li>
-                            <li class="p-2">{{ $LoggedUserInfo['dob'] }}</li>
-                            <li class="p-2">{{ $LoggedUserInfo['city'] }} </li>
-                            <li class="p-2">{{ $LoggedUserInfo['suburb'] }}</li>
-                            <li class="p-2">{{ $LoggedUserInfo['phoneNo'] }}</li>
-                            </ul>
 
-                        </div>
-                        
-                        
-                        </div>
-                    </div>
-              
-                <!-- End of friends card -->
+
+            
+          
             </div>
        
     
@@ -158,18 +168,18 @@
         
 
         <div class="bg-white shadow rounded-lg w-2/5 mb-10 ml-7 ">
-                
-            <ul class="divide-y divide-gray-300 text-sm text-center ">
-                <li class="p-2 text-xl bg-gray-200"><a href="/ride">Rides</a></li>
-                <li class="p-2">Location </li>
-                <li class="p-2">Distance</li>
-                <li class="p-2 text-left bg-gray-200">Date:</li>
-                <li class="p-2">Location </li>
-                <li class="p-2">Distance</li>
-                <li class="p-2 text-left bg-gray-200">Date:</li>
-            </ul>
-      
-            </div>          
+        <ul class="divide-y divide-gray-300 text-sm text-center ">
+            <li class="p-2 text-xl ">Next Rides</li>
+            <li class="p-2">Location </li>
+            <li class="p-2">Distance</li>
+            <li class="p-2 text-left bg-gray-200">Date:</li>
+            <li class="p-2">Location </li>
+            <li class="p-2">Distance</li>
+            <li class="p-2 text-left bg-gray-200">Date:</li>
+        </ul>
+  
+        </div>			
+ </div>     
      </div>
         
         
