@@ -55,7 +55,7 @@ class PostsController extends Controller
     public function delete($id)
     {
         $posts = Posts::find($id);
-        $posts->delete ();
+        $posts->delete();
         return redirect('/adminposts');
 
     }

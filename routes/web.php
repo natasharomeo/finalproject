@@ -6,8 +6,8 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
-
 use App\Http\Controllers\RideController;
+
 
 
 
@@ -60,5 +60,12 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
+
+Route::get('/adminride', [RideController::class, 'index']);
+Route::post('/adminride', [RideController::class, 'store']);
+Route::get('/addride', [RideController::class, 'create']);
+Route::get('/adminride/{id}/editride', [RideController::class, 'showData']);
+Route::post('/editride', [RideController::class, 'update']);
+Route::get('delete/{id}', [RideController::class, 'deleteride']);
 
 //no chnanges
