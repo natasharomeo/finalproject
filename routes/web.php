@@ -34,7 +34,7 @@ Route::get('/app/logout',[UserController::class, 'logout'])->name('auth.logout')
 
 Route::get('/auth/login',[UserController::class, 'login'])->name('auth.login');
 Route::get('/auth/register',[UserController::class, 'register'])->name('auth.register');
-Route::get('/dashboard',[UserController::class, 'dashboard']);
+Route::get('/dashboard',[UserController::class, 'userdashboard']);
 
 //});
 

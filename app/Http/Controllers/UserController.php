@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+
     function login (){
     return view ('auth.login');
     }
@@ -79,24 +80,23 @@ class UserController extends Controller
             }
         }
 
-        function dashboard (){
-        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
-        //$posts = Posts::all();
-        //$training = Training::all();
-      //  return view('/dashboard', $data, compact('training'));
-      return view('/dashboard', $data)
-       // ->with('data', ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()])
-        ->with('training', Training::all())
-        ->with('posts', Posts::all())
-        ->with('ride', Ride::all()); 
-        }
 
-       // function announcments (){
-       // $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
-       // $posts = Posts::all();
-       // return view('/dashboard', compact('posts'));
-       // }
-        
+        // fetches data from database tables and displayes them on the user profile 
+        function userdashboard (){
+        //query to fetch user with requested email from database 
+        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+        $userRole = $data['role'];
+            if($userRole === 'admin'){
+            return view('/adminuser');
+    }else{
+
+
+        return view('/dashboard', $data)
+          ->with('training', Training::all())
+          ->with('posts', Posts::all())
+          ->with('ride', Ride::all()); 
+    }
+}
 
 
         function logout(){
