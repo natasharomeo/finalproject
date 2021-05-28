@@ -60,16 +60,7 @@
                                     class="flex items-center py-3">{{ $LoggedUserInfo['phoneNo'] }}</span></span>
             
                         </li>
-           
-           
-           
-
                     </div>
-                    
-
-
-            
-          
             </div>
        
     
@@ -126,21 +117,52 @@
 
             
            
-           
+           {{-- Training list --}}
         <div class="flex justify-evenly">
             <div class="bg-white shadow rounded-lg w-2/5 mb-10 ml-7 ">
                 <ul class="divide-y divide-gray-300 text-sm text-center ">
-                    <li class="p-2 text-xl bg-gray-200"><a href="/training">Training</a></li>
-                    <li class="p-2">Location </li>
-                    <li class="p-2">Distance</li>
-                    <li class="p-2 text-left bg-gray-200">Date:</li>
-                    <li class="p-2">Location </li>
-                    <li class="p-2">Distance</li>
-                    <li class="p-2 text-left bg-gray-200">Date:</li>
+
+                    <li class="p-2 text-xl bg-gray-200">Training</li>    
+                    @foreach($training as $trainings)
+    
+        <tr class="border-b hover:bg-orange-100 bg-gray-100">
+            <td class="p-3 px-5"><input type="text" value="{{$trainings['name']}}" class="bg-transparent"></td>
+            <td class="p-3 px-5"><input type="text" value= "{{$trainings['location']}}" class="bg-transparent"></td>
+            <td class="p-3 px-5"><input type="text" value="{{$trainings['rideleader']}}" class= "bg-transparent"></td>
+            <td class="p-3 px-5"><input type="date" value="{{$trainings['date']}}" class= "bg-transparent"></td>
+            <td class="p-3 px-5 flex justify-end"></td>
+        </tr>
+        
+            @endforeach
+    
                 </ul>
           
+            </div>
+
+            {{-- Rides Lists --}}
+            <div class="flex justify-evenly">
+                <div class="bg-white shadow rounded-lg w-2/5 mb-10 ml-7 ">
+                    <ul class="divide-y divide-gray-300 text-sm text-center ">
+    
+                        <li class="p-2 text-xl bg-gray-200">Rides</li>    
+                        @foreach($ride as $rides)
+        
+            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+                <td class="p-3 px-5"><input type="text" value="{{$rides['name']}}" class="bg-transparent"></td>
+                <td class="p-3 px-5"><input type="text" value= "{{$rides['location']}}" class="bg-transparent"></td>
+                <td class="p-3 px-5"><input type="text" value= "{{$rides['distance']}}" class="bg-transparent"></td>
+                <td class="p-3 px-5"><input type="text" value="{{$rides['rideleader']}}" class= "bg-transparent"></td>
+                <td class="p-3 px-5"><input type="date" value="{{$rides['date']}}" class= "bg-transparent"></td>
+                <td class="p-3 px-5 flex justify-end"></td>
+            </tr>
+            
+                @endforeach
+        
+                    </ul>
+              
                 </div>
- 
+
+
                 {{-- Annoucment of events --}}
     
             
@@ -153,32 +175,20 @@
                 <td class="p-3 px-5"><input type="text" value="{{$post['title']}}" class="bg-transparent"></td>
                 <td class="p-3 px-5"><input type="text" value= "{{$post['description']}}" class="bg-transparent"></td>
                 <td class="p-3 px-5"><input type="text" value="{{$post['author']}}" class= "bg-transparent"></td>
-                <td class="p-3 px-5 flex justify-end">
-                    
-                  
-                </td>
-                </tr>
+                <td class="p-3 px-5 flex justify-end"></td>
+            </tr>
             
                 @endforeach
         
         
                     </ul>
             </div>
+
+            
         </div>
         
 
-        <div class="bg-white shadow rounded-lg w-2/5 mb-10 ml-7 ">
-        <ul class="divide-y divide-gray-300 text-sm text-center ">
-            <li class="p-2 text-xl ">Next Rides</li>
-            <li class="p-2">Location </li>
-            <li class="p-2">Distance</li>
-            <li class="p-2 text-left bg-gray-200">Date:</li>
-            <li class="p-2">Location </li>
-            <li class="p-2">Distance</li>
-            <li class="p-2 text-left bg-gray-200">Date:</li>
-        </ul>
-  
-        </div>			
+		
  </div>     
      </div>
         
