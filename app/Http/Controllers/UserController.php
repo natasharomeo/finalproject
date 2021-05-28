@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Users;
 use App\Models\Posts;
+use App\Models\Ride;
+use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -79,8 +81,14 @@ class UserController extends Controller
 
         function dashboard (){
         $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
-        $posts = Posts::all();
-        return view('/dashboard', $data, compact('posts'));
+        //$posts = Posts::all();
+        //$training = Training::all();
+      //  return view('/dashboard', $data, compact('training'));
+      return view('/dashboard', $data)
+       // ->with('data', ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()])
+        ->with('training', Training::all())
+        ->with('posts', Posts::all())
+        ->with('ride', Ride::all()); 
         }
 
        // function announcments (){
