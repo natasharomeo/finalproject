@@ -4,7 +4,7 @@
 
 <div class="flex justify-evenly">
         <div class="bg-white rounded-lg w-2/5 mb-10 ml-7 ">
-            <div class="w-full md:w-5/6 mx-2 h-64">
+            <div class="">
 
                 <div class="bg-white p-3 shadow-md rounded-lg">
                     <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">

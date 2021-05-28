@@ -4,7 +4,7 @@
 
 <div class="flex justify-evenly">
         <div class="bg-white rounded-lg w-2/5 mb-10 ml-7 ">
-            <div class="w-full md:w-5/6 mx-2 h-64">
+            <div class="">
 
                 <div class="bg-white p-3 shadow-md rounded-lg">
                     <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
@@ -19,10 +19,10 @@
                     </div>
        
                     <ul class="list-inside space-y-2">
-                        <li class="p-2"></li>
-                        <li class="p-2"></li>
-                        <li class="p-2"></li>
-                        <li class="p-2 text-left bg-gray-200"></li>
+                        <li class="p-2">Name</li>
+                        <li class="p-2">Location</li>
+                        <li class="p-2">Distance</li>
+                        <li class="p-2 text-left bg-gray-200">Date</li>
                         <li><button class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Join ride</button></li>
                     </ul>
            
