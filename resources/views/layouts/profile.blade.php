@@ -12,6 +12,15 @@
                         <img class=" h-12 self-center" src="/images/mainlogo.png" />
                       </div>
                 </li>
+                <li>
+                    <a href="" class="p-3">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/ride" class="p-3">Rides</a>
+                </li>
+                <li>
+                    <a href="/training" class="p-3">Training</a>
+                </li>
             </ul>
 
             <ul class="flex items-center">

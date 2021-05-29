@@ -16,10 +16,10 @@
                     <a href="" class="p-3">Dashboard</a>
                 </li>
                 <li>
-                    <a href="" class="p-3">Rides</a>
+                    <a href="/ride" class="p-3">Rides</a>
                 </li>
                 <li>
-                    <a href="" class="p-3">Training</a>
+                    <a href="/training" class="p-3">Training</a>
                 </li>
             </ul>
 
