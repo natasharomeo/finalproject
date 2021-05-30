@@ -30,7 +30,7 @@
                     <td class="p-3 px-5"><input type="text" value="{{$rides['name']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="text" value="{{$rides['location']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="int" value="{{$rides['distance']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="text" value="{{$rides['rideLeader']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-5"><input type="text" value="{{$rides['rideleader']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="date" value="{{$rides['date']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5 flex justify-end">
                     
