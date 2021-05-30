@@ -18,7 +18,10 @@ class AdminController extends Controller
 
     function adminuser (){
         $users = Users::all();
-        return view('/adminuser', compact('users'));
+        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+        return view('/adminuser', $data)
+        ->with('users', Users::all());
+        
         }
 
         public function show($id)
@@ -33,9 +36,13 @@ class AdminController extends Controller
             $users -> fname=$req->fname;
             $users -> lname=$req->lname;
             $users -> email=$req->email;
+            $users -> status=$req->status;
+            $users -> role=$req->role;
             $users -> save();
             return redirect('/adminuser');
 
         }
+
+        
 
 }

@@ -24,10 +24,16 @@
                                 <input type="text" class="border-2 border-gray-300 p-2 w-full" name="email" id="email" value="{{$users['email']}}"></input>
                             </div>
 
+                            <div class="mb-4">
+                                <label class="text-xl text-gray-600">status <span class="text-red-500">*</span></label></br>
+                                    <input type="text" class="border-2 border-gray-300 p-2 w-full" name="status" id="status" value="{{$users['status']}}"></input>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="text-xl text-gray-600">role <span class="text-red-500">*</span></label></br>
+                                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="role" id="role" value="{{$users['role']}}"></input>
+                                    </div>
+
                             <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Update</button>
-                        
-            
-               
                 </form>
             </div>
         </div>

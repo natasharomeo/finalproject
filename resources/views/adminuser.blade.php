@@ -22,11 +22,9 @@
                 <th class="text-left p-3 px-5">First Name</th>
                 <th class="text-left p-3 px-5">Last Name</th>
                 <th class="text-left p-3 px-5">Email</th>
-                <th class="text-left p-3 px-5">Date of Birth</th>
-                <th class="text-left p-3 px-5">City</th>
-                <th class="text-left p-3 px-5">Suburb</th>
-                <th class="text-left p-3 px-5">Phone No.</th>
                 <th class="text-left p-3 px-5">Status</th>
+                <th class="text-left p-3 px-5">Role</th>
+
                 <th></th>
             </tr>
             @foreach($users as $user)
@@ -35,12 +33,8 @@
                 <td class="p-3 px-5"><input type="text" value="{{$user['fname']}}" class="bg-transparent"></td>
                 <td class="p-3 px-5"><input type="text" value= "{{$user['lname']}}" class="bg-transparent"></td>
                 <td class="p-3 px-5"><input type="text" value="{{$user['email']}}" class= "bg-transparent"></td>
-                <td class="p-3 px-5"><input type="date" value="{{$user['dob']}}" class="bg-transparent"></td>
-                <td class="p-3 px-5"><input type="text" value= "{{$user['city']}}" class="bg-transparent"></td>
-                <td class="p-3 px-5"><input type="text" value="{{$user['suburb']}}" class= "bg-transparent"></td>
-                <td class="p-3 px-5"><input type="text" value="{{$user['phoneNo']}}" class= "bg-transparent"></td>
                 <td class="p-3 px-5"><input type="text" value="{{$user['status']}}" class= "bg-transparent"></td>
-    
+                <td class="p-3 px-5"><input type="text" value="{{$user['role']}}" class= "bg-transparent"></td>
               
                 <td class="p-3 px-5 flex justify-end">
                     

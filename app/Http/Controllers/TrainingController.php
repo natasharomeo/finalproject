@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Training;
+use App\Models\Users;
 use Illuminate\Http\Request;
 
 
@@ -15,7 +16,9 @@ class TrainingController extends Controller
     public function index()
     {
         $training = Training::all();
-        return view('/admintraining', compact('training'));
+        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+        return view('/admintraining', $data)
+        ->with('training', Training::all());
     }
 
 
@@ -89,4 +92,5 @@ class TrainingController extends Controller
         $trainings->delete();
         return redirect('/admintrainings');
     }
+
 }
