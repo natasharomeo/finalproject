@@ -1,23 +1,14 @@
 @extends('layouts.layouts')
 
 @section('content')
-    <div class="justify-center p-56">
-        <div class="text-center md:font-bold text-3xl">
-            <h1>
+
+            <h1 class = "text-center md:font-bold text-3xl">
                 Annoucments
             </h1>
-        </div>
 
-        <table class="w-full text-md bg-white shadow-md rounded mb-4 ">
+            <table class="w-full text-md bg-white shadow-md rounded mb-4 pl-96 pb-96">
 
-        @foreach($posts as $post)
-<tr>
-<td>
-</tr>
-        @endforeach
-
-
-        <tbody>
+ 
             <tr class="border-b">
                 <th class="text-left p-3 px-5">Title</th>
                 <th class="text-left p-3 px-5">Description</th>
@@ -44,7 +35,7 @@
             @endforeach
             
       
-        </tbody>
+
 
         </table>
 
@@ -53,7 +44,6 @@
         </div>
     </div>
 
-    
-</div>
+
 
 @endsection

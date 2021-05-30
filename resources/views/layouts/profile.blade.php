@@ -16,7 +16,7 @@
 
             <ul class="flex items-center">
                 <li>
-                    <a href="{{ route('auth.logout') }}"type= "button" class=" border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">Logout</a>
+                    <a href="{{ route('auth.logout') }}"type= "button" class="focus:outline-none text-red-600 text-s py-2.5 px-5 rounded-md hover:bg-red-100">Logout</a>
                 </li>
             </ul>
         </nav>

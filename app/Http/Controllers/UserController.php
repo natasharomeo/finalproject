@@ -7,6 +7,7 @@ use App\Models\Ride;
 use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use PhpMyAdmin\CheckUserPrivileges;
 
 class UserController extends Controller
 {
@@ -84,20 +85,22 @@ class UserController extends Controller
         // fetches data from database tables and displayes them on the user profile 
         function userdashboard (){
         //query to fetch user with requested email from database 
+
         $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
-        $userRole = $data['role'];
-            if($userRole === 'admin'){
-            return view('/adminuser');
-    }else{
+       // $userRole = Users::find('role');
+        $userRole = Users::find(session('LoggedUser'))->role;
+        if($userRole === 'admin'){
+           return view('/admin/admindashboard', $data)
+           ->with('posts', Posts::all());
+        }else{
 
-
-        return view('/dashboard', $data)
+ 
+            return view('/dashboard', $data)
           ->with('training', Training::all())
           ->with('posts', Posts::all())
           ->with('ride', Ride::all()); 
-    }
-}
-
+            }
+        }
 
         function logout(){
             if(session()->has('LoggedUser')){
@@ -107,5 +110,4 @@ class UserController extends Controller
         }
   
     }
-
-    //new code
+    

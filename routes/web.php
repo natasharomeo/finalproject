@@ -41,10 +41,10 @@ Route::get('/dashboard',[UserController::class, 'userdashboard']);
 
 //User Admin Routes
 Route::get('/adminuser/{id}/edituser', [AdminController::class, 'show']);
-Route::post('/edituser', [PostsController::class, 'update']);
+Route::post('/edituser', [AdminController::class, 'update']);
 
 
-
+//showDatatraining
 //Admin Routes 
 
 Route::get('/adminposts', [PostsController::class, 'index']);
@@ -73,5 +73,6 @@ Route::post('/admintraining', [TrainingController::class, 'store']);
 Route::get('/addtraining', [TrainingController::class, 'create']);
 Route::get('/admintraining/{id}/edittraining', [TrainingController::class, 'showData']);
 Route::post('/edittraining', [TrainingController::class, 'update']);
+Route::get('delete/{id}', [TrainingController::class, 'delete']);
 Route::get('delete/{id}', [TrainingController::class, 'delete']);
 
