@@ -7,6 +7,7 @@ use App\Models\Users;
 use App\Models\Posts;
 use App\Models\Ride;
 use App\Models\Training;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use PhpMyAdmin\CheckUserPrivileges;
@@ -121,6 +122,14 @@ class UserController extends Controller
                 session()->pull('LoggedUser');
                 return redirect('/auth/login');
             }
+        }
+
+        public function delete($id)
+        {
+            $user = Users::find($id);
+            $user->delete();
+            return redirect('/adminuser');
+    
         }
   
     }

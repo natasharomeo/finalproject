@@ -51,7 +51,7 @@ class PostsController extends Controller
     
 
 
-    public function delete($id)
+    public function deletepost($id)
     {
         $posts = Posts::find($id);
         $posts->delete();
