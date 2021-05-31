@@ -23,9 +23,9 @@
     
       <body class="bg-gray-100">
     
-
+    <div class="flex flex-col lg:flex-row h-full w-full">
           
-        <div class="bg-white p-3 border-t-4 border-green-400 w-72 mb-8 ml-7">
+        <div class="bg-white p-3 border-t-4 border-green-400 w-72 mb-8 ml-7 lg:pb-0 lg:max-w-sm px-3 flex flex-row lg:flex-col flex-wrap lg:flex-nowrap">
            
             <a href="" class="flex space-x-2 items-center text-gray-600 p-2 hover:bg-gray-200 lg hover:text-gray-900 border-b border-gray-800 py-4">
                 <p class="text-gray-900 font-bold text-xl leading-8 my-1">{{ $LoggedUserInfo ['fname'] }}</p>
@@ -67,9 +67,11 @@
                             
         </div>
 
+        <div class="lg:flex-1 px-3 min-h-0 min-w-0">
         @yield('content')   
-      
- 
+        </div>
+
+    </div>
     
   
 
