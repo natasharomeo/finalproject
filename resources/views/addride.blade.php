@@ -5,7 +5,7 @@
 <div class="justify-center pl-64">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg ">
             <div class="p-6 bg-white border-b border-gray-200">
-                <form method="POST" action="/admintraining">
+                <form method="POST" action="/adminride">
                     @csrf
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Name<span class="text-red-500">*</span></label></br>
