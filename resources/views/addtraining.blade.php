@@ -18,11 +18,6 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="text-xl text-gray-600">Ride Leader</label></br>
-                        <input type="" class="border-2 border-gray-300 p-2 w-full" name="rideleader" id="rideleader" value="" required></input>
-                    </div>
-
-                    <div class="mb-4">
                         <label class="text-xl text-gray-600">Date<span class="text-red-500">*</span></label></br>
                         <input type="date" class="border-2 border-gray-300 p-2 w-full" name="date" id="date" value="" required></input>                   
                     </div>
