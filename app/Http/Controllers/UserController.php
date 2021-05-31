@@ -95,12 +95,21 @@ class UserController extends Controller
         //query to fetch user with requested email from database 
   
         $userBadges = [];
+            $user = Users::where('id','=', session('LoggedUser'))->first();
+            $data = ['LoggedUserInfo'=>$user];
+            $userbadges = BadgeUser::where('user_id',$user['id'])->get();
         if(!empty($userbadges)) {
             foreach ($userbadges as $userbadge) {
                 $userBadges[] = Badges::find($userbadge['badge_id']);
             }
         }
-        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+
+        $LoggedUserInfo = Users::where('id','=', session('LoggedUser'))->first();
+        $userTotalDistance = Ride::select('distance')->where('rideleader',$LoggedUserInfo['id'])->sum('distance');
+        $userTotalRides = Ride::where('rideleader',$LoggedUserInfo['id'])->count();
+
+
+        $data = ['LoggedUserInfo'=>$LoggedUserInfo];
        // $userRole = Users::find('role');
         $userRole = Users::find(session('LoggedUser'))->role;
         if($userRole === 'admin'){
@@ -110,8 +119,10 @@ class UserController extends Controller
             return view('/dashboard', $data)
           ->with('training', Training::all())
           ->with('posts', Posts::all())
-          ->with('ride', Ride::all())
-          ->with('userBadges', $userBadges); 
+          ->with('ride', Ride::all()->where('rideleader',$LoggedUserInfo['id']))
+          ->with('userBadges', $userBadges)
+          ->with('userTotalDistance', $userTotalDistance)
+          ->with('userTotalRides', $userTotalRides);
             }
         }
 

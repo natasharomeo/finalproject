@@ -30,10 +30,11 @@ class BadgesController extends Controller
             'title' => $request['title'],
             'type' => $request['type'],
             'description' => $request['description'],
+            'requirements' => $request['requirements'],
             'image' => $imageName,
         ]);
         if($badge){
-            return redirect('badge')->with('success','New User created successfully');
+            return redirect('badge')->with('success','New Badge created successfully');
         }else{
             return redirect('badge')->with('fail','Something went wrong, Please try again');
         }
@@ -49,6 +50,7 @@ class BadgesController extends Controller
         $badge = Badges::find($request->id);
         $badge->title = $request->title;
         $badge->description = $request->description;
+        $badge->requirements = $request->requirements;
 
         if(!empty($request->new_image)){
             $request->validate([

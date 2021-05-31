@@ -14,6 +14,7 @@ class Badges extends Model
         'title',
         'type',
         'description',
+        'requirements',
         'image'
     ];
 }

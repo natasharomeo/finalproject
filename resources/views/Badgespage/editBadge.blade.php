@@ -1,4 +1,4 @@
-@extends('layouts.layouts')
+@extends('layouts.profile')
 
 @section('content')
 
@@ -14,8 +14,25 @@
                     </div>
 
                     <div class="mb-4">
+                        <label class="text-xl text-gray-600">Badge Type<span class="text-red-500">*</span></label></br>
+                        <select class="border-2 border-gray-300 p-2 w-full" name="type">
+                            <option value="Distance">Distance</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="text-xl text-gray-600">Requirements for Badge</label></br>
+                        <select class="border-2 border-gray-300 p-2 w-full" name="requirements">
+                            <option value="25">25-49 KM</option>
+                            <option value="50">50-99 KM</option>
+                            <option value="100">100+ KM</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
                         <label class="text-xl text-gray-600">Description<span class="text-red-500">*</span></label></br>
-                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" placeholder="Description" value="{{$badge->title}}" required>
+                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" placeholder="Description" value="{{$badge->description}}" required>
                     </div>
 
                     <div class="mb-4">
