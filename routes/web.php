@@ -66,7 +66,6 @@ Route::get('/admintraining/{id}/edittraining', [TrainingController::class, 'show
 Route::post('/edittraining', [TrainingController::class, 'update']);
 Route::get('delete-training/{id}', [TrainingController::class, 'deletetraining']);
 
-
 //badges
 Route::get('badge' , 'App\Http\Controllers\BadgesController@index')->name('badge');
 Route::get('addbadge' , 'App\Http\Controllers\BadgesController@showAddBadgeForm')->name('addbadge');
@@ -74,6 +73,7 @@ Route::post('addbadge' , 'App\Http\Controllers\BadgesController@saveBadge')->nam
 Route::get('delete-badge/{id}' , 'App\Http\Controllers\BadgesController@deleteBadge')->name('deleteBadge');
 Route::get('edit-badge/{id}' , 'App\Http\Controllers\BadgesController@editBadge')->name('editBadge');
 Route::post('update-badge' , 'App\Http\Controllers\BadgesController@updateBadge')->name('updatBadge');
+
 
 Route::get('training', function () {
     return view('training');

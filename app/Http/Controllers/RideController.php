@@ -32,7 +32,9 @@ class RideController extends Controller
      */
     public function create()
     {
+
         $users = Users::all();
+
         return view("/addride",compact('users'));
     }
 
