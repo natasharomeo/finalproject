@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Badges;
+use App\Models\BadgeUser;
 use App\Models\Ride;
 use App\Models\Users;
 use Illuminate\Http\Request;
@@ -30,7 +32,10 @@ class RideController extends Controller
      */
     public function create()
     {
-        return view("/addride");
+
+        $users = Users::all();
+
+        return view("/addride",compact('users'));
     }
 
     /**
@@ -48,6 +53,31 @@ class RideController extends Controller
         $rides->rideleader = request('rideleader');
         $rides->date = request('date');
         $rides->save();
+
+        $user_rides_distance = Ride::select('distance')->where('rideleader',request('rideleader'))->sum('distance');
+
+        $user_badge = 1;
+
+        if($user_rides_distance >= 25 && $user_rides_distance < 50){
+            $user_badge = Badges::select('id')->where('type','Distance')->where('requirements', 25)->first();
+            $user_badge = $user_badge['id'];
+        }elseif ($user_rides_distance >= 50 && $user_rides_distance < 100){
+            $user_badge = Badges::select('id')->where('type','Distance')->where('requirements', 50)->first();
+            $user_badge = $user_badge['id'];
+        }else{
+            $user_badge = Badges::select('id')->where('type','Distance')->where('requirements', 100)->first();
+            $user_badge = $user_badge['id'];
+        }
+
+
+        $checkifBadgeExist = BadgeUser::where('user_id',request('rideleader'))->where('badge_id',$user_badge)->first();
+        if(empty($checkifBadgeExist)) {
+            $BadgeUser = new \App\Models\BadgeUser();
+            $BadgeUser->user_id = request('rideleader');
+            $BadgeUser->badge_id = $user_badge;
+            $BadgeUser->save();
+        }
+
         return redirect('/adminride');
     }
 

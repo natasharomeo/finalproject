@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Badges;
+use App\Models\BadgeUser;
 use App\Models\Users;
 use App\Models\Posts;
 use App\Models\Ride;
 use App\Models\Training;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use PhpMyAdmin\CheckUserPrivileges;
@@ -90,20 +93,36 @@ class UserController extends Controller
         // fetches data from database tables and displayes them on the user profile 
         function userdashboard (){
         //query to fetch user with requested email from database 
+  
+        $userBadges = [];
+            $user = Users::where('id','=', session('LoggedUser'))->first();
+            $data = ['LoggedUserInfo'=>$user];
+            $userbadges = BadgeUser::where('user_id',$user['id'])->get();
+        if(!empty($userbadges)) {
+            foreach ($userbadges as $userbadge) {
+                $userBadges[] = Badges::find($userbadge['badge_id']);
+            }
+        }
 
-        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+        $LoggedUserInfo = Users::where('id','=', session('LoggedUser'))->first();
+        $userTotalDistance = Ride::select('distance')->where('rideleader',$LoggedUserInfo['id'])->sum('distance');
+        $userTotalRides = Ride::where('rideleader',$LoggedUserInfo['id'])->count();
+
+
+        $data = ['LoggedUserInfo'=>$LoggedUserInfo];
        // $userRole = Users::find('role');
         $userRole = Users::find(session('LoggedUser'))->role;
         if($userRole === 'admin'){
            return view('/admin/admindashboard', $data)
            ->with('posts', Posts::all());
         }else{
-
- 
             return view('/dashboard', $data)
           ->with('training', Training::all())
           ->with('posts', Posts::all())
-          ->with('ride', Ride::all()); 
+          ->with('ride', Ride::all()->where('rideleader',$LoggedUserInfo['id']))
+          ->with('userBadges', $userBadges)
+          ->with('userTotalDistance', $userTotalDistance)
+          ->with('userTotalRides', $userTotalRides);
             }
         }
 
@@ -114,6 +133,14 @@ class UserController extends Controller
                 session()->pull('LoggedUser');
                 return redirect('/auth/login');
             }
+        }
+
+        public function delete($id)
+        {
+            $user = Users::find($id);
+            $user->delete();
+            return redirect('/adminuser');
+    
         }
   
     }

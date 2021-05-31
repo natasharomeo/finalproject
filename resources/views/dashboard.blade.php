@@ -18,13 +18,13 @@
                         <li class="flex items-center py-3">
                             <span>Total Distance </span>
                             <span class="ml-auto"><span
-                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">11km</span></span>
+                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{@$userTotalDistance}}km</span></span>
             
                         </li>
                         <li class="flex items-center py-3">
                             <span>Total Rides </span>
                             <span class="ml-auto"><span
-                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">12 Rides</span></span>
+                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{$userTotalRides}} Rides</span></span>
             
                         </li>
                     </ul>
@@ -67,56 +67,15 @@
 
          <div class="w-full md:w-9/12 mx-2 h-64">
             <div class="bg-white shadow rounded-lg w-z mb-10 ml-7 content-start flex justify-items-center">
-                
+                @foreach ($userBadges as $user)
                 <div>
-                        <img src="/images/1.png" alt="" class="justify-items-end" alt="">
-                    
-                    </div>
-                    <div>
-                        <img src="/images/2.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                    <div>
-                        <img src="/images/3.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                    <div>
-                        <img src="/images/4.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                    <div>
-                        <img src="/images/5.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                    <div>
-                        <img src="/images/6.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                    <div>
-                        <img src="/images/7.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                    <div>
-                        <img src="/images/8.png" alt="" class="justify-items-end" alt="">
-                    </div>
-                    <div>
-                        <img src="/images/9.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                    <div>
-                        <img src="/images/10.png" alt="" class="justify-items-end" alt="">
-                    </div>
-                    <div>
-                        <img src="/images/11.png" alt="" class="justify-items-end" alt="">
-                    </div>
-                    <div>
-                        <img src="/images/12.png" alt="" class="justify-items-end" alt="">
-                    </div>
-                    <div>
-                        <img src="/images/13.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                    <div>
-                        <img src="/images/14.png" alt="" class="justify-items-end " alt="">
-                    </div>
-                
-               
+                        <img src="{{asset('badges/'.$user['image'])}}" alt="" class="justify-items-end" alt="" width="70px">
+                </div>
+                @endforeach
             </div>
 
             
-           
+
  {{-- Training list --}}
      
  <div class=" flex items-center py-3">
@@ -159,6 +118,7 @@
                     <a href="/ride"span class="tracking-wide ">Upcoming Rides</span></a>
                 </div>
                 @foreach($ride as $rides)
+
     
                 <ul class="list-inside space-y-2">
                     <li class="p-2">{{$rides['name']}}</li>
@@ -201,15 +161,8 @@
                         @endforeach
                     </div>
                 </div>
-        
-            
-           
-        
-                </div>
-        
-     
-    
-            
+       
+                </div>     
         
     </div>
 

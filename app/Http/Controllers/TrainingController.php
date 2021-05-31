@@ -87,11 +87,11 @@ class TrainingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete($id)
+    public function deletetraining($id)
     {
         $trainings = Training::find($id);
         $trainings->delete();
-        return redirect('/admintrainings');
+        return redirect('/admintraining');
     }
 
 }
