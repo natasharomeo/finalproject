@@ -2,7 +2,6 @@
 
 @section('content')
 
-<div class="justify-center p-32">
         <div class="text-center md:font-bold text-3xl">
             <h1>
                 Rides
@@ -50,5 +49,4 @@
     </div>
 
     
-</div>
 @endsection
