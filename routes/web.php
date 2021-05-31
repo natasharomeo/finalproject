@@ -3,13 +3,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\JoinTrainingController;
-use App\Http\Controllers\PagesController;
 use App\Http\Controllers\RideController;
 use App\Http\Controllers\TrainingController;
-use App\Http\Controllers\BadgesController;
 
 
 Route::get('/adminuser', [AdminController::class, 'adminuser']);
@@ -51,10 +50,6 @@ Route::get('/admin', function () {
 });
 
 
-
-
-
-
 Route::get('/adminride', [RideController::class, 'index']);
 Route::post('/adminride', [RideController::class, 'store']);
 Route::get('/addride', [RideController::class, 'create']);
@@ -70,3 +65,6 @@ Route::post('/edittraining', [TrainingController::class, 'update']);
 Route::get('delete/{id}', [TrainingController::class, 'delete']);
 Route::get('delete/{id}', [TrainingController::class, 'delete']);
 
+Route::get('training', function () {
+    return view('training');
+});
