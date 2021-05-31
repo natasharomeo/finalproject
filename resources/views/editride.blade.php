@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="mb-4">
-                        <label class="text-xl text-gray-600">Distance<span class="text-red-500">*</span></label></br>
+                        <label class="text-xl text-gray-600">Distance in KM<span class="text-red-500">*</span></label></br>
                         <input type="text" class="border-2 border-gray-300 p-2 w-full" name="distance" id="distance" value="{{$ride['distance']}}" required></input>
                     </div>
 

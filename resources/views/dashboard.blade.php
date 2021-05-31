@@ -18,13 +18,13 @@
                         <li class="flex items-center py-3">
                             <span>Total Distance </span>
                             <span class="ml-auto"><span
-                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">11km</span></span>
+                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{@$userTotalDistance}}km</span></span>
             
                         </li>
                         <li class="flex items-center py-3">
                             <span>Total Rides </span>
                             <span class="ml-auto"><span
-                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">12 Rides</span></span>
+                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{$userTotalRides}} Rides</span></span>
             
                         </li>
                     </ul>

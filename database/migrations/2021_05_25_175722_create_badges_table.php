@@ -19,7 +19,7 @@ class CreateBadgesTable extends Migration
             $table->string('type',15);
             $table->string('description',255)->nullable();
             $table->string('requirements',255)->nullable();
-            $table->binary('image');
+            $table->string('image',25);
         });
     }
 
