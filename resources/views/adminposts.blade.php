@@ -3,7 +3,7 @@
 @section('content')
 
             <h1 class = "text-center md:font-bold text-3xl">
-                Annoucments
+                Announcements
             </h1>
 
             <table class="w-full text-md bg-white shadow-md rounded mb-4 pl-96 pb-96">

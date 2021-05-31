@@ -3,7 +3,6 @@
 
 @section('content')
     
-    <div class="justify-center p-96">
         <div class="text-center md:font-bold text-3xl">
             <h1>
                 Users 
@@ -25,11 +24,11 @@
                 @foreach($users as $user)
     
                 <tr class="border-b hover:bg-orange-100 bg-gray-100">
-                    <td class="p-3 px-5"><input type="text" value="{{$user['fname']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="text" value= "{{$user['lname']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="text" value="{{$user['email']}}" class= "bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="text" value="{{$user['status']}}" class= "bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="text" value="{{$user['role']}}" class= "bg-transparent"></td>
+                    <td class="p-3 px-4"><input type="string" value="{{$user['fname']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-4"><input type="text" value= "{{$user['lname']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-4"><input type="text" value="{{$user['email']}}" class= "bg-transparent"></td>
+                    <td class="p-3 px-2"><input type="text" value="{{$user['status']}}" class= "bg-transparent"></td>
+                    <td class="p-3 px-2"><input type="text" value="{{$user['role']}}" class= "bg-transparent"></td>
                   
                     <td class="p-3 px-5 flex justify-end">
                         
@@ -51,5 +50,4 @@
     </div>
 
     
-</div>
 @endsection
