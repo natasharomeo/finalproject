@@ -22,7 +22,7 @@
                         <li class="p-2">{{$trainings['name']}}</li>
                         <li class="p-2">{{$trainings['location']}}</li>
                         <li class="p-2 text-left bg-gray-200">{{$trainings['date']}}</li>
-                        <li><button id="buttonmodal" class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Join training</button></li>
+                        <li><a href="{{route('addTraining')}}" class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Join training</a></li>
                     </ul>
            
                     @endforeach
@@ -43,13 +43,13 @@
                     d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
         </button>
+
         <!-- Test content -->
         <p>
             Are you sure you want to join this training session?
         </p>
         <ul class="flex items-center">
-            <li>
-                <a type="button" class=" border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">Cancel</a>
+                <a type="button" class=" border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline" >Cancel</a>
             </li>
             <li>
                 <a type="button" class=" border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">Join</a>

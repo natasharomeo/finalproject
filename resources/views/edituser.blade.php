@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="justify-center pl-64">
+<div class="justify-center pl-72 pr-52">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg ">
             <div class="p-6 bg-white border-b border-gray-200">
 <form method = "POST" action = "/edituser">
@@ -28,12 +28,22 @@
                                 <label class="text-xl text-gray-600">status <span class="text-red-500">*</span></label></br>
                                     <input type="text" class="border-2 border-gray-300 p-2 w-full" name="status" id="status" value="{{$users['status']}}"></input>
                                 </div>
-                                <div class="mb-4">
+
+                            <div class="mb-4">
                                     <label class="text-xl text-gray-600">role <span class="text-red-500">*</span></label></br>
-                                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="role" id="role" value="{{$users['role']}}"></input>
-                                    </div>
+                                    <select class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type = "text" name="role" value="{{$users['role']}}">
+                                        <option>Admin</option>
+                                        <option>User</option>
+                                      </select>
+                            </div>
+
+                         
+
+
+                                   
 
                             <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Update</button>
+                            <button role="" class="p-3 bg-red-500 text-white hover:bg-blue-400" required>Cancel</button>
                 </form>
             </div>
         </div>
