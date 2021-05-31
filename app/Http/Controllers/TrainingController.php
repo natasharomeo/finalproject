@@ -19,6 +19,7 @@ class TrainingController extends Controller
         $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
         return view('/admintraining', $data)
         ->with('training', Training::all());
+        
     }
 
 

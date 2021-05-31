@@ -2,27 +2,16 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+//use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\JoinTrainingController;
 use App\Http\Controllers\RideController;
 use App\Http\Controllers\TrainingController;
 
 
-
-
-
-Route::get('/example', [PagesController::class, 'example']);
-
 Route::get('/adminuser', [AdminController::class, 'adminuser']);
-
-//Route::get('/', [PagesController::class, 'index']);
-Route::get('/training', [PagesController::class, 'training']);
-Route::get('/ride', [PagesController::class, 'ride']);
-
-
-
 Route::post('/auth/save' , [UserController::class, 'save'])->name('auth.save');
 Route::post('/auth/check', [UserController::class, 'check'])->name('auth.check');
 
@@ -54,7 +43,7 @@ Route::get('/adminposts/{id}/editpost', [PostsController::class, 'showData']);
 Route::post('/editpost', [PostsController::class, 'update']);
 Route::get('delete/{id}', [PostsController::class, 'delete']);
 
-//Route::get('/dashboard', [PostsController::class, 'display']);
+
 
 Route::get('/admin', function () {
     return view('admin');
@@ -76,3 +65,6 @@ Route::post('/edittraining', [TrainingController::class, 'update']);
 Route::get('delete/{id}', [TrainingController::class, 'delete']);
 Route::get('delete/{id}', [TrainingController::class, 'delete']);
 
+Route::get('training', function () {
+    return view('training');
+});

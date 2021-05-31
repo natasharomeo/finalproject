@@ -3,31 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Training;
+use App\Models\Ride;
 
 class PagesController extends Controller
 {
-    public function index()
+  
+ function training()
     {
-        return view('dashboard');
+          return view('training')
+          ->with('training', Training::all());
+
     }
 
-    public function training()
+    function ride()
     {
-        return view('training');
+          return view('ride')
+          ->with('ride', Ride::all());
+
     }
 
-    public function ride()
-    {
-        return view('ride');
-    }
 
-    public function example()
-    {
-        return view('example');
-    }
-
+  
 }
-
-
-
 
