@@ -9,12 +9,19 @@ use App\Models\Ride;
 use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use PhpMyAdmin\CheckUserPrivileges;
 
 class UserController extends Controller
 {
+
     function login (){
     return view ('auth.login');
     }
+
+   function training ()
+   {
+    return view('/training');
+   }
 
    function register ()
    {
@@ -81,36 +88,33 @@ class UserController extends Controller
             }
         }
 
-        function dashboard (){
 
-        $user = Users::where('id','=', session('LoggedUser'))->first();
-        $data = ['LoggedUserInfo'=>$user];
-        $userbadges = BadgeUser::where('user_id',$user['id'])->get();
-
+        // fetches data from database tables and displayes them on the user profile 
+        function userdashboard (){
+        //query to fetch user with requested email from database 
+  
         $userBadges = [];
         if(!empty($userbadges)) {
             foreach ($userbadges as $userbadge) {
                 $userBadges[] = Badges::find($userbadge['badge_id']);
             }
         }
-        //$posts = Posts::all();
-        //$training = Training::all();
-      //  return view('/dashboard', $data, compact('training'));
-      return view('/dashboard', $data)
-       // ->with('data', ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()])
-        ->with('training', Training::all())
-        ->with('posts', Posts::all())
-        ->with('ride', Ride::all())
-        ->with('userBadges', $userBadges);
+        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+       // $userRole = Users::find('role');
+        $userRole = Users::find(session('LoggedUser'))->role;
+        if($userRole === 'admin'){
+           return view('/admin/admindashboard', $data)
+           ->with('posts', Posts::all());
+        }else{
+            return view('/dashboard', $data)
+          ->with('training', Training::all())
+          ->with('posts', Posts::all())
+          ->with('ride', Ride::all())
+          ->with('userBadges', $userBadges); 
+            }
         }
 
-       // function announcments (){
-       // $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
-       // $posts = Posts::all();
-       // return view('/dashboard', compact('posts'));
-       // }
-        
-
+       
 
         function logout(){
             if(session()->has('LoggedUser')){
@@ -120,5 +124,4 @@ class UserController extends Controller
         }
   
     }
-
-    //new code
+    

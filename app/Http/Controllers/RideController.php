@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Badges;
 use App\Models\BadgeUser;
 use App\Models\Ride;
-use Illuminate\Foundation\Auth\User;
+use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +18,10 @@ class RideController extends Controller
     public function index()
     {
         $ride = Ride::all();
-        return view('/adminride', compact('ride'));
+        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+        return view('/adminride', $data)
+        ->with('ride', Ride::all());
+
     }
 
 

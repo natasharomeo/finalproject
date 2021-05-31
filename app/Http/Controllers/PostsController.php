@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Users;
 use App\Models\Posts;
 use Illuminate\Http\Request;
 
@@ -11,11 +11,10 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Posts::all();
-        return view('/adminposts', compact('posts'));
+        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+        return view('/adminposts', $data)
+        ->with('posts', Posts::all());
     }
-
-  
-
 
     public function create()
     {
