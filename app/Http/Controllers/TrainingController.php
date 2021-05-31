@@ -81,7 +81,7 @@ class TrainingController extends Controller
         return redirect('/admintraining');
     }
     
-    function delete($id)
+    function deletetraining($id)
     {
         $trainings = Training::find($id);
         $trainings->delete();

@@ -89,6 +89,7 @@ class RideController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function deleteride($id)
     {
         $rides = Ride::find($id);

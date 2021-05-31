@@ -115,6 +115,14 @@ class UserController extends Controller
                 return redirect('/auth/login');
             }
         }
-  
+
+        public function deleteride($id)
+        {
+            $rides = Ride::find($id);
+            $rides->delete();
+            return redirect('/adminride');
+        }
+
+   
     }
     
