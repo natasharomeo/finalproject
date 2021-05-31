@@ -138,7 +138,7 @@
                     <li class="p-2">{{$trainings['name']}}</li>
                     <li class="p-2">{{$trainings['location']}}</li>
                     <li class="p-2 text-left bg-gray-200">{{$trainings['date']}}</li>
-                    <li><button id="buttonmodal" class="block w-full text-blue-800 text-sm font-semibold rounded-lg hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:bg-gray-100 hover:shadow-xs p-3 my-4">Join training</button></li>
+                    <li><a href=""type= "button" class="focus:outline-none text-red-600 text-s py-2.5 px-5 rounded-md hover:bg-red-100">Join</a></li>
                 </ul>
            
                 @endforeach
@@ -156,7 +156,7 @@
                                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                     </span>
-                    <a href="/ride"span class="tracking-wide ">Upcoming Training</span></a>
+                    <a href="/ride"span class="tracking-wide ">Upcoming Rides</span></a>
                 </div>
                 @foreach($ride as $rides)
     

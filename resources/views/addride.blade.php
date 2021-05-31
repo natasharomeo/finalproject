@@ -1,10 +1,10 @@
-@extends('layouts.profile')
+@extends('layouts.layouts')
 
 @section('content')
 <div class="justify-center pl-64">
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg ">
             <div class="p-6 bg-white border-b border-gray-200">
-                <form method="POST" action="/adminride">
+                <form method="POST" action="{{route('add-ride')}}">
                     @csrf
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Name<span class="text-red-500">*</span></label></br>
@@ -23,7 +23,11 @@
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Ride Leader</label></br>
-                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="rideleader" id="rideleader" value="" required></input>
+                        <select class="border-2 border-gray-300 border-r p-2" name="rideleader" required>
+                            @foreach($users as $user)
+                                <option value="{{$user['id']}}">{{$user['fname'].' '.$user['lname']}}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="mb-4">
