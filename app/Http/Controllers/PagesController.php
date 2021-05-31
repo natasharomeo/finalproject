@@ -9,12 +9,7 @@ use App\Models\Ride;
 class PagesController extends Controller
 {
   
- function training()
-    {
-          return view('training')
-          ->with('training', Training::all());
-
-    }
+ 
 
     function ride()
     {

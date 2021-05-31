@@ -80,18 +80,12 @@ class TrainingController extends Controller
         $trainings->save();
         return redirect('/admintraining');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function delete($id)
+    
+    function deletetraining($id)
     {
         $trainings = Training::find($id);
         $trainings->delete();
-        return redirect('/admintrainings');
+        return redirect('/admintraining');
     }
 
 }

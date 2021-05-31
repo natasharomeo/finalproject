@@ -19,8 +19,9 @@
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Ride Leader</label></br>
-                        <input type="" class="border-2 border-gray-300 p-2 w-full" name="rideleader" id="rideleader" value="" required></input>
+                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="rideleader" id="rideleader" value="" required></input>
                     </div>
+
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Date<span class="text-red-500">*</span></label></br>
@@ -30,7 +31,6 @@
                     <div class="flex p-1">
                         <select class="border-2 border-gray-300 border-r p-2" name="action">
                             <option>Save and Publish</option>
-                            <option>Save Draft</option>
                         </select>
                         <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
                     </div>
