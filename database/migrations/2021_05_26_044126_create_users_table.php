@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
                 $table->text('phoneNo');
                 $table->string('status');
                 $table->text('password');
+                $table->enum('role', ['user', 'admin'])->default('user');
                 $table->timestamps();
             });
     }
