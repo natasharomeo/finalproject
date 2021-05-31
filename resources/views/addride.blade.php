@@ -24,7 +24,11 @@
 
                     <div class="mb-4">
                         <label class="text-xl text-gray-600">Ride Leader</label></br>
-                        <input type="" class="border-2 border-gray-300 p-2 w-full" name="rideleader" id="rideleader" value="" required></input>
+                        <select class="border-2 border-gray-300 border-r p-2" name="rideleader" required>
+                            @foreach($users as $user)
+                                <option value="{{$user['id']}}">{{$user['fname'].' '.$user['lname']}}</option>
+                            @endforeach
+                        </select>
                     </div>
 
 
