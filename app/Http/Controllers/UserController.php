@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Badges;
+use App\Models\BadgeUser;
 use App\Models\Users;
 use App\Models\Posts;
 use App\Models\Ride;
@@ -90,7 +92,13 @@ class UserController extends Controller
         // fetches data from database tables and displayes them on the user profile 
         function userdashboard (){
         //query to fetch user with requested email from database 
-
+  
+        $userBadges = [];
+        if(!empty($userbadges)) {
+            foreach ($userbadges as $userbadge) {
+                $userBadges[] = Badges::find($userbadge['badge_id']);
+            }
+        }
         $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
        // $userRole = Users::find('role');
         $userRole = Users::find(session('LoggedUser'))->role;
@@ -98,12 +106,11 @@ class UserController extends Controller
            return view('/admin/admindashboard', $data)
            ->with('posts', Posts::all());
         }else{
-
- 
             return view('/dashboard', $data)
           ->with('training', Training::all())
           ->with('posts', Posts::all())
-          ->with('ride', Ride::all()); 
+          ->with('ride', Ride::all())
+          ->with('userBadges', $userBadges); 
             }
         }
 
