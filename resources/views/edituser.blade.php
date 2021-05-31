@@ -37,11 +37,6 @@
                                       </select>
                             </div>
 
-                         
-
-
-                                   
-
                             <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Update</button>
                             <button role="" class="p-3 bg-red-500 text-white hover:bg-blue-400" required>Cancel</button>
                 </form>

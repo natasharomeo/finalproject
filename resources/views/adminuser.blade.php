@@ -35,8 +35,8 @@
                         
                         <a href= "/adminuser/{{$user->id }}/edituser" button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit </a>
                     </a>
-                    <a href= {{"delete/".$user['id']}} button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete </a>
-                    </a>
+                    <a href= {{ "delete/".$user['id'] }} button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete </a>
+                </a>
                 </td>
                 </tr>
             
