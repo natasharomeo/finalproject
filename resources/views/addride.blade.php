@@ -1,4 +1,4 @@
-@extends('layouts.layouts')
+@extends('layouts.profile')
 
 @section('content')
 <div class="justify-center pl-64">
