@@ -8,8 +8,8 @@
         <nav class="p-6 bg-green-100 flex justify-between mb-6">
             <ul class="flex items-center">
                 <li>
-                    <div class="h-10 w-10 self-center mr-2">
-                        <img class=" h-12 self-center" src="/images/mainlogo.png" />
+                    <div class="h-10 w-30 self-center mr-2">
+                        <img class=" h-10 w-25 self-center" src="/images/mainlogo.png" />
                       </div>
                 </li>
             </ul>
