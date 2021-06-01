@@ -29,14 +29,8 @@
                     <input type="date" class="border-2 border-gray-300 p-2 w-full" name="date" id="date" value="{{$training['date']}}" required></input>
                 </div>
 
-                <div class="flex p-1">
-                    <ul class="border-2 border-gray-300 border-r p-2" name="action">
-                        <il>Save and Publish</il>
-                    </ul>
-                    <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
-                    <a href="/admintraining" class="p-3 bg-red-500 text-white hover:bg-red-400">Cancel</a>
-
-                </div>
+                <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Update</button>
+                <a href="/admintraining" class="p-3 bg-red-500 text-white hover:bg-red-400">Cancel</a>
             </form>
         </div>
     </div>

@@ -157,7 +157,7 @@
                 </li>
                 <li class="flex items-center py-3">
                     <span>{{$posts['description']}}</span>
-                    <span class="ml-auto"><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{ $LoggedUserInfo['fname'] }}</span></span>
+                    <span class="ml-auto"><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{ $posts['author'] }}</span></span>
 
                 </li>
             </ul>
