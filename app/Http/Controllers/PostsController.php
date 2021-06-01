@@ -26,7 +26,6 @@ class PostsController extends Controller
         $posts = new Posts();
         $posts->title = request('title');
         $posts->description = request('description');
-        $posts->author = request('author');
         $posts->save();
         return redirect('/adminposts');
     }

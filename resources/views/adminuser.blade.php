@@ -24,11 +24,11 @@
                 @foreach($users as $user)
     
                 <tr class="border-b hover:bg-orange-100 bg-gray-100">
-                    <td class="p-3 px-4"><input type="string" value="{{$user['fname']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-4"><input type="text" value= "{{$user['lname']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-4"><input type="text" value="{{$user['email']}}" class= "bg-transparent"></td>
-                    <td class="p-3 px-2"><input type="text" value="{{$user['status']}}" class= "bg-transparent"></td>
-                    <td class="p-3 px-2"><input type="text" value="{{$user['role']}}" class= "bg-transparent"></td>
+                    <td class="p-3 px-4"><input type="string"readonly value="{{$user['fname']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-4"><input type="text" readonly value= "{{$user['lname']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-4"><input type="text" readonly value="{{$user['email']}}" class= "bg-transparent"></td>
+                    <td class="p-3 px-2"><input type="text" readonly value="{{$user['status']}}" class= "bg-transparent"></td>
+                    <td class="p-3 px-2"><input type="text" readonly value="{{$user['role']}}" class= "bg-transparent"></td>
                   
                     <td class="p-3 px-5 flex justify-end">
                         

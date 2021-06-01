@@ -7,7 +7,7 @@
         <section class="flex flex-col md:flex-row h-screen items-center">
 
             <div class="bg-indigo-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
-              <img src="/images/login.jpeg" alt="" class="w-full h-full object-cover">
+              <img src="/images/main.jpg" alt="" class="w-full h-full object-cover">
             </div>
         @yield('content')
     </body>
