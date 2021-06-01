@@ -16,9 +16,9 @@ class CreateUserBadgesTable extends Migration
         Schema::create('user_badges', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('badge_id');
-            $table->foreign('badge_id')->references('id')->on('badges');
+            $table->foreign('badge_id')->references('id')->on('badges')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -49,7 +49,7 @@
             Are you sure you want to join this training session?
         </p>
         <ul class="flex items-center">
-                <a type="button" class=" border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline" >Cancel</a>
+                <a type="button" class=" border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline" >Cancel</a>
             </li>
             <li>
                 <a type="button" class=" border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">Join</a>

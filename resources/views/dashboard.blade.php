@@ -11,20 +11,16 @@
                         class="bg-gray-100 text-gray-600 hover:text-gray-700 py-2 px-3 mt-3 divide-y rounded shadow-sm">
                         <li class="flex items-center py-3">
                             <span>Status</span>
-                            <span class="ml-auto"><span
-                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{ $LoggedUserInfo['status'] }}</span></span>
-            
+                            <span class="ml-auto"><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{ $LoggedUserInfo['status'] }}</span></span>
                         </li>
                         <li class="flex items-center py-3">
                             <span>Total Distance </span>
-                            <span class="ml-auto"><span
-                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{@$userTotalDistance}}km</span></span>
+                            <span class="ml-auto"><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{@$userTotalDistance}}km</span></span>
             
                         </li>
                         <li class="flex items-center py-3">
                             <span>Total Rides </span>
-                            <span class="ml-auto"><span
-                                    class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{$userTotalRides}} Rides</span></span>
+                            <span class="ml-auto"><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{$userTotalRides}} Rides</span></span>
             
                         </li>
                     </ul>
@@ -78,7 +74,7 @@
 
  {{-- Training list --}}
      
- <div class=" flex items-center py-3">
+ <div class=" flex items-stretch py-3">
     <div class="bg-white p-3 border-t-4 w-2/5 mb-10 ml-7">
             <div class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
                 <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
@@ -137,7 +133,7 @@
            {{-- Annoucment of events --}}
         <div class=" flex items-center py-3">
             <div class="bg-white p-3 border-t-4 w-2/5 mb-10 ml-7">
-                    <div class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-2 px-3 mt-3 divide-y rounded shadow-sm">
+                    <div class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-8 px-8 mt-3 divide-y rounded shadow-sm">
                         <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
                             <span clas="text-green-500">
                                 <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -153,7 +149,8 @@
                         <tr class="border-b hover:bg-orange-100 bg-gray-100">
                             <td class="p-3 px-5"><input type="text" value="{{$post['title']}}" class="bg-transparent"></td>
                             <td class="p-3 px-5"><input type="text" value= "{{$post['description']}}" class="bg-transparent"></td>
-                            <td class="p-3 px-5"><input type="text" value="{{$post['author']}}" class= "bg-transparent"></td>
+                            <!--<td class="p-3 px-5"><input type="text" value="{{$post['author']}}" class= "bg-transparent"></td> -->
+                            <span class="p-3 px-5"><span>{{$post['author']}}</span></span>
                             <td class="p-3 px-5 flex justify-end"></td>
                         </tr>
                         
@@ -162,7 +159,10 @@
                     </div>
                 </div>
        
-                </div>     
+                </div> 
+                
+                
+                
         
     </div>
 

@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Users;
 use App\Models\Badges;
 
 class BadgesController extends Controller
 {
     public function index(){
         $Badges = Badges::all();
-        return view('Badgespage.badge',compact('Badges',$Badges));
+        $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
+        return view('Badgespage.badge', $data)
+        ->with('Badges', Badges::all());
+
+        //compact('Badges',$Badges));
     }
 
     public function showAddBadgeForm(){

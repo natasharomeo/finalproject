@@ -24,8 +24,7 @@
                             <input type="text" class="border-2 border-gray-300 p-2 w-full" name="author" id="author" value="{{$posts['author']}}"></input>
                         </div>
                         <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Update</button>
-                        
-                    
+                        <a href="/adminposts" class="p-3 bg-red-500 text-white hover:bg-red-400">Cancel</a>                   
         
                     </div>
                 </form>
