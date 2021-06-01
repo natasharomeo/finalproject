@@ -23,12 +23,12 @@
                <label class="block text-gray-700">Email Address</label>
                      
                      <input type="text" class=" w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" name="email" placeholder="Enter email address" value="{{ old('email') }}">
-                     <span class="text-danger">@error('email'){{ $message }} @enderror</span>
+                     <span style="color:red;" class="text-danger">@error('email'){{ $message }} @enderror</span>
          
                      <label class="block text-gray-700">Password</label>
                      <input type="password" class=" w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                      focus:bg-white focus:outline-none" name="password" placeholder="Enter password">
-                     <span class="text-danger">@error('password'){{ $message }} @enderror</span>
+                     <span style="color:red;" class="text-danger">@error('password'){{ $message }} @enderror</span>
                 
                   <div class="text-right mt-2">
                      <a href="#" class="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Forgot Password?</a>
