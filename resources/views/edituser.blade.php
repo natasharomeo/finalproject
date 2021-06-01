@@ -29,11 +29,16 @@
                                     <input type="text" class="border-2 border-gray-300 p-2 w-full" name="status" id="status" value="{{$users['status']}}"></input>
                                 </div>
 
+                                <div class="mb-4">
+                                    <label class="text-xl text-gray-600">Password <span class="text-red-500">*</span></label></br>
+                                        <input type="text" class="border-2 border-gray-300 p-2 w-full" name="password" id="password" value="{{$users['password']}}"></input>
+                                    </div>
+
                             <div class="mb-4">
                                     <label class="text-xl text-gray-600">role <span class="text-red-500">*</span></label></br>
                                     <select class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type = "text" name="role" value="{{$users['role']}}">
-                                        <option>Admin</option>
                                         <option>User</option>
+                                        <option>Admin</option>
                                       </select>
                             </div>
 

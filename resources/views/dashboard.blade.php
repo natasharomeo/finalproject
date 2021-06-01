@@ -85,7 +85,7 @@
                                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                     </span>
-                    <a href="/training"span class="tracking-wide ">Upcoming Training</span></a>
+                    <a href="#"span class="tracking-wide ">Upcoming Training</span></a>
                 </div>
                 @foreach($training as $trainings)
     
@@ -111,7 +111,7 @@
                                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                     </span>
-                    <a href="/ride"span class="tracking-wide ">Upcoming Rides</span></a>
+                    <a href="#"span class="tracking-wide ">Upcoming Rides</span></a>
                 </div>
                 @foreach($ride as $rides)
 
@@ -130,41 +130,31 @@
 
         </div>
 
-           {{-- Annoucment of events --}}
-        <div class=" flex items-center py-3">
-            <div class="bg-white p-3 border-t-4 w-2/5 mb-10 ml-7">
-                    <div class="bg-gray-100 text-gray-600 hover:text-gray-700 hover:shadow py-8 px-8 mt-3 divide-y rounded shadow-sm">
-                        <div class="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
-                            <span clas="text-green-500">
-                                <svg class="h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
-                            </span>
-                            <span class="tracking-wide ">Annoucments</span>
-                        </div>
-                        @foreach($posts as $post)      
-            
-                        <tr class="border-b hover:bg-orange-100 bg-gray-100">
-                            <td class="p-3 px-5"><input type="text" value="{{$post['title']}}" class="bg-transparent"></td>
-                            <td class="p-3 px-5"><input type="text" value= "{{$post['description']}}" class="bg-transparent"></td>
-                            <!--<td class="p-3 px-5"><input type="text" value="{{$post['author']}}" class= "bg-transparent"></td> -->
-                            <span class="p-3 px-5"><span>{{$post['author']}}</span></span>
-                            <td class="p-3 px-5 flex justify-end"></td>
-                        </tr>
-                        
+               {{-- Annoucment of events --}}
+    
+        <div class="bg-white p-3 border-t-4 border-green-400 ">
                    
-                        @endforeach
-                    </div>
-                </div>
-       
-                </div> 
+            <h1 class="text-gray-900 font-bold text-xl leading-8 my-1">Annoucnments</h1>
+            @foreach($posts as $posts)
+            <ul
+                class="bg-gray-100 text-gray-600 hover:text-gray-700 py-2 px-3 mt-3 divide-y rounded shadow-sm">
+                <li class="flex items-center py-3">
+                    <span>{{$posts['title']}}</span>
+    
+                </li>
+                <li class="flex items-center py-3">
+                    <span>{{$posts['description']}}</span>
+                    <span class="ml-auto"><span class="bg-green-500 py-1 px-2 rounded text-white text-sm">{{ $LoggedUserInfo['fname'] }}</span></span>
+    
+                </li>
+            </ul>
+            @endforeach
+        </div>
+    
+
                 
                 
-                
-        
-    </div>
+
 
 		
  </div>     
