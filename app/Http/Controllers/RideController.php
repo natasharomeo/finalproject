@@ -19,7 +19,7 @@ class RideController extends Controller
     {
         $ride = Ride::all();
         $data = ['LoggedUserInfo'=>Users::where('id','=', session('LoggedUser'))->first()];
-        $ride = Ride::join('users', 'users.id', '=', 'ride.rideleader')->get();
+
         return view('/adminride', $data)
         ->with('ride',$ride);
 

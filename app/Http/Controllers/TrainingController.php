@@ -30,7 +30,8 @@ class TrainingController extends Controller
      */
     public function create()
     {
-        return view("/addtraining");
+        $users = Users::all();
+        return view("/addtraining",compact('users'));
     }
 
     /**
@@ -58,8 +59,8 @@ class TrainingController extends Controller
      */
     public function showData($id)
     {
-        $trainings = Training::find($id);
-        return view('/training', ['training' => $id]);
+        $training = Training::find($id);
+        return view('/edittraining', ['training' => $training]);
     }
 
 

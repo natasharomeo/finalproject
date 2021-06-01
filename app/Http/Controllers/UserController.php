@@ -19,11 +19,6 @@ class UserController extends Controller
     return view ('auth.login');
     }
 
-   function training ()
-   {
-    return view('/training');
-   }
-
    function register ()
    {
        return view ('auth.register');

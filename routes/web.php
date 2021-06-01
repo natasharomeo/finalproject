@@ -19,13 +19,13 @@ Route::get('/app/logout',[UserController::class, 'logout'])->name('auth.logout')
 
 
 
-Route::group(['middleware'=>['AuthCheck']], function(){
+//Route::group(['middleware'=>['AuthCheck']], function(){
 
 Route::get('/auth/login',[UserController::class, 'login'])->name('auth.login');
 Route::get('/auth/register',[UserController::class, 'register'])->name('auth.register');
 Route::get('/dashboard',[UserController::class, 'userdashboard']);
 
-});
+//});
 
 
 //User Admin Routes
@@ -73,8 +73,3 @@ Route::post('addbadge' , 'App\Http\Controllers\BadgesController@saveBadge')->nam
 Route::get('delete-badge/{id}' , 'App\Http\Controllers\BadgesController@deleteBadge')->name('deleteBadge');
 Route::get('edit-badge/{id}' , 'App\Http\Controllers\BadgesController@editBadge')->name('editBadge');
 Route::post('update-badge' , 'App\Http\Controllers\BadgesController@updateBadge')->name('updatBadge');
-
-
-Route::get('training', function () {
-    return view('training');
-});
