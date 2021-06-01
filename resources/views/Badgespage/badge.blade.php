@@ -22,11 +22,11 @@
                     <td></td>
 
                     <td class="p-2 px-4 flex space-x-2 justify-end">
-                        <a href="/edit-badge/{{$badge->id }}">
+                        <a href="{{url('/edit-badge/'.$badge->id)}}">
                             <button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded focus:outline-none focus:shadow-outline">Edit</button>
                         </a>
                         {{--<button type="button" class="text-sm bg-green-500 hover:bg-green-700 text-white py-1 px-3 rounded focus:outline-none focus:shadow-outline">Allocate</button>--}}
-                        <a href="/delete-badge/{{$badge->id }}">
+                        <a href="{{url('/delete-badge/'.$badge->id)}}">
                             <button type="button" class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-3 rounded focus:outline-none focus:shadow-outline">Delete</button>
                         </a>
                     </td>
@@ -43,4 +43,3 @@
 
 
 </div>
-@endsection
