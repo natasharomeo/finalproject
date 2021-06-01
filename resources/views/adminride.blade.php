@@ -2,8 +2,7 @@
 
 @section('content')
 
-<div class="justify-center p-32">
-        <div class="text-center md:font-bold text-3xl">
+        <div class="text-center md:font-bold text-3xl pb-4">
             <h1>
                 Rides
             </h1>
@@ -30,7 +29,7 @@
                     <td class="p-3 px-5"><input type="text" value="{{$rides['name']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="text" value="{{$rides['location']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="int" value="{{$rides['distance']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="text" value="{{$rides['rideleader']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-5"><input type="text" value="{{$rides['fname'].' '.$rides['lname']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5"><input type="date" value="{{$rides['date']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5 flex justify-end">
                     
@@ -50,5 +49,4 @@
     </div>
 
     
-</div>
 @endsection
