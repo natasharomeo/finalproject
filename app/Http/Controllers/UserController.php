@@ -60,7 +60,7 @@ class UserController extends Controller
          $save = $user->save();
 
          if($save){
-            return back()->with('success','New User has been successfuly added to database');
+            return back()->with('Success','New User has been successfuly created');
          }else{
              return back()->with('fail','Something went wrong, try again later');
          }

@@ -19,17 +19,17 @@ Route::get('/app/logout',[UserController::class, 'logout'])->name('auth.logout')
 
 
 
-//Route::group(['middleware'=>['AuthCheck']], function(){
+Route::group(['middleware'=>['AuthCheck']], function(){
 
 Route::get('/auth/login',[UserController::class, 'login'])->name('auth.login');
 Route::get('/auth/register',[UserController::class, 'register'])->name('auth.register');
 Route::get('/dashboard',[UserController::class, 'userdashboard']);
 
-//});
+});
 
 
 //User Admin Routes
-Route::get('/delete/{id}',[UserController::class, 'delete']);
+Route::get('/delete-user/{id}',[UserController::class, 'delete']);
 Route::get('/adminuser/{id}/edituser', [AdminController::class, 'show']);
 Route::post('/edituser', [AdminController::class, 'update']);
 
