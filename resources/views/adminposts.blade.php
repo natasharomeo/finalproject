@@ -2,7 +2,7 @@
 
 @section('content')
 
-            <h1 class = "text-center md:font-bold text-3xl">
+            <h1 class = "text-center md:font-bold text-3xl  pb-4">
                 Announcements
             </h1>
 

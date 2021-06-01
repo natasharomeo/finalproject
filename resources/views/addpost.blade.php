@@ -24,9 +24,8 @@
                             <input type="text" class="border-2 border-gray-300 p-2 w-full" name="author" id="author" value="" required></input>
                         </div>
 
-    
-                   
                         <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                        <a href="/adminposts" class="p-3 bg-red-500 text-white hover:bg-red-400">Cancel</a>
                     </div>
                 </form>
             </div>

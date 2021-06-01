@@ -3,7 +3,7 @@
 
 @section('content')
     
-        <div class="text-center md:font-bold text-3xl">
+        <div class="text-center md:font-bold text-3xl pb-4">
             <h1>
                 Users 
             </h1>

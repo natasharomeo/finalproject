@@ -46,8 +46,9 @@
                         <input type="file" class="border-2 border-gray-300 p-2 w-full" name="new_image" {{$badge->image}}>
                     </div>
 
-                    <div class="flex p-1">
+                    <div class="mb-4">
                         <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                        <a href="/admintraining" class="p-3 bg-red-500 text-white hover:bg-red-400">Cancel</a>
                     </div>
                 </form>
             </div>

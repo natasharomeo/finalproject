@@ -39,12 +39,9 @@
                         <input type="date" class="border-2 border-gray-300 p-2 w-full" name="date" id="date" value="" required></input>                   
                     </div>
 
-                    <div class="flex p-1">
-                        <select class="border-2 border-gray-300 border-r p-2" name="action">
-                            <option>Save and Publish</option>
-                            <option>Save Draft</option>
-                        </select>
+                    <div class="mb-4">
                         <button role="submit" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                        <a href="/adminride" class="p-3 bg-red-500 text-white hover:bg-red-400">Cancel</a>
                     </div>
                 </form>
             </div>
