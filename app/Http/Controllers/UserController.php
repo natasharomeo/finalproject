@@ -56,7 +56,7 @@ class UserController extends Controller
     $user->suburb = $request->suburb;
     $user->phoneNo = $request->phoneNo;
     $user->status = $request->status;
-    $user->password = $request->password;
+    $user->password =  Hash::make($request->password);
          $save = $user->save();
 
          if($save){
