@@ -27,11 +27,11 @@
                 </tr>
                 @foreach($ride as $rides)
                     <tr class="border-b hover:bg-orange-100 bg-gray-100">
-                    <td class="p-3 px-5"><input type="text" value="{{$rides['name']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="text" value="{{$rides['location']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="int" value="{{$rides['distance']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="text" value="{{$rides['fname'].' '.$rides['lname']}}" class="bg-transparent"></td>
-                    <td class="p-3 px-5"><input type="date" value="{{$rides['date']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-5"><input type="text" readonly value="{{$rides['name']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-5"><input type="text" readonly value="{{$rides['location']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-5"><input type="int" readonly value="{{$rides['distance']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-5"><input type="text" readonly value="{{$rides['fname'].' '.$rides['lname']}}" class="bg-transparent"></td>
+                    <td class="p-3 px-5"><input type="date" readonly value="{{$rides['date']}}" class="bg-transparent"></td>
                     <td class="p-3 px-5 flex justify-end">
                     
                         <a href= "/adminride/{{$rides->id }}/editride" button type="button" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit </a>
