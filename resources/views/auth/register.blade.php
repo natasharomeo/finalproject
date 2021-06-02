@@ -97,9 +97,9 @@
         <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-password">
           Status
         </label>
-        <select class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type="text" name="status" placeholder="status" value="{{ old('status') }}">
-          <option>Pilot Rider</option>
-        </select>
+        <div class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type="text" name="status" placeholder="status" value="{{ old('status') }}">
+          <ul>Pilot Rider</ul>
+        </div>
       </div>
     </div>
 
