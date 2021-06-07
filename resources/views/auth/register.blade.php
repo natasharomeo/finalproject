@@ -97,7 +97,7 @@
           Status
         </label>
         <select class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3" input type="text" name="status" placeholder="status" value="{{ old('status') }}">
-          <option>Pilot Rider</option>
+          <option>Volunteer</option>
         </select>
       </div>
     </div>
